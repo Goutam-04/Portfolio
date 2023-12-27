@@ -1,5 +1,22 @@
-import * as React from "react"
+import React from 'react';
+// import PropTypes from 'prop-types';
+// import styled from 'styled-components';
+import { Layout} from '../components/index';
 
-export default function Home() {
-  return <div>Hello world!</div>
-}
+// const StyledMainContainer = styled.main`
+//   counter-reset: section;
+// `;
+
+const IndexPage = () => (
+  <Layout >
+    {/* <StyledMainContainer className="fillHeight">
+  
+    </StyledMainContainer> */}
+  </Layout>
+);
+
+// IndexPage.propTypes = {
+//   location: PropTypes.object.isRequired,
+// };
+
+export default IndexPage;
