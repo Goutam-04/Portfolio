@@ -1,22 +1,21 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
 import { Layout} from '../components/index';
+import "../styles/index.css"
+import { ThemeProvider } from '../components/Context/theme';
 
-// const StyledMainContainer = styled.main`
-//   counter-reset: section;
-// `;
+
 
 const IndexPage = () => (
+  <>
+
+  <ThemeProvider>
+
   <Layout >
-    {/* <StyledMainContainer className="fillHeight">
-  
-    </StyledMainContainer> */}
+
   </Layout>
+  </ThemeProvider>
+  </>
 );
 
-// IndexPage.propTypes = {
-//   location: PropTypes.object.isRequired,
-// };
 
 export default IndexPage;

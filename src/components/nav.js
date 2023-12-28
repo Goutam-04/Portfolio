@@ -1,291 +1,105 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
-// import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import styled, { css } from 'styled-components';
-// import { navLinks } from '@config';
-// import { loaderDelay } from '@utils';
-// import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
-// import { Menu } from '@components';
-// import { IconLogo, IconHex } from '@components/icons';
-
-const StyledHeader = styled.header`
-  ${({ theme }) => theme.mixins.flexBetween};
-  position: fixed;
-  top: 0;
-  z-index: 11;
-  padding: 0px 50px;
-  width: 100%;
-  height: var(--nav-height);
-  background-color: rgba(10, 25, 47, 0.85);
-  filter: none !important;
-  pointer-events: auto !important;
-  user-select: auto !important;
-  backdrop-filter: blur(10px);
-  transition: var(--transition);
-
-  @media (max-width: 1080px) {
-    padding: 0 40px;
-  }
-  @media (max-width: 768px) {
-    padding: 0 25px;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    ${props =>
-    props.scrollDirection === 'up' &&
-      !props.scrolledToTop &&
-      css`
-        height: var(--nav-scroll-height);
-        transform: translateY(0px);
-        background-color: rgba(10, 25, 47, 0.85);
-        box-shadow: 0 10px 30px -10px var(--navy-shadow);
-      `};
-
-    ${props =>
-    props.scrollDirection === 'down' &&
-      !props.scrolledToTop &&
-      css`
-        height: var(--nav-scroll-height);
-        transform: translateY(calc(var(--nav-scroll-height) * -1));
-        box-shadow: 0 10px 30px -10px var(--navy-shadow);
-      `};
-  }
-`;
-
-const StyledNav = styled.nav`
-  ${({ theme }) => theme.mixins.flexBetween};
-  position: relative;
-  width: 100%;
-  color: var(--lightest-slate);
-  font-family: var(--font-mono);
-  counter-reset: item 0;
-  z-index: 12;
-
-  .logo {
-    ${({ theme }) => theme.mixins.flexCenter};
-
-    a {
-      color: var(--green);
-      width: 42px;
-      height: 42px;
-      position: relative;
-      z-index: 1;
-
-      .hex-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        @media (prefers-reduced-motion: no-preference) {
-          transition: var(--transition);
-        }
-      }
-
-      .logo-container {
-        position: relative;
-        z-index: 1;
-        svg {
-          fill: none;
-          user-select: none;
-          @media (prefers-reduced-motion: no-preference) {
-            transition: var(--transition);
-          }
-          polygon {
-            fill: var(--navy);
-          }
-        }
-      }
-
-      &:hover,
-      &:focus {
-        outline: 0;
-        transform: translate(-4px, -4px);
-        .hex-container {
-          transform: translate(4px, 3px);
-        }
-      }
-    }
-  }
-`;
-
-const StyledLinks = styled.div`
-  display: flex;
-  align-items: center;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-
-  ol {
-    ${({ theme }) => theme.mixins.flexBetween};
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    li {
-      margin: 0 5px;
-      position: relative;
-      counter-increment: item 1;
-      font-size: var(--fz-xs);
-
-      a {
-        padding: 10px;
-
-        &:before {
-          content: '0' counter(item) '.';
-          margin-right: 5px;
-          color: var(--green);
-          font-size: var(--fz-xxs);
-          text-align: right;
-        }
-      }
-    }
-  }
-
-  .resume-button {
-    ${({ theme }) => theme.mixins.smallButton};
-    margin-left: 15px;
-    font-size: var(--fz-xs);
-  }
-`;
-
+import React from "react";
+import { ThemeContext } from "./Context/theme";
+import "../styles/nav.css";
+import Brightness2Icon from '@mui/icons-material/Brightness2';
+import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 const Nav = () => {
-//   const [isMounted, setIsMounted] = useState(!isHome);
-//   const scrollDirection = useScrollDirection('down');
-//   const [scrolledToTop, setScrolledToTop] = useState(true);
-//   const prefersReducedMotion = usePrefersReducedMotion();
+  const { themename, toggeltheme } = React.useContext(ThemeContext);
+  const [showNavList, setShowNavList] = React.useState(false);
 
-//   const handleScroll = () => {
-//     setScrolledToTop(window.pageYOffset < 50);
-//   };
-
-//   useEffect(() => {
-//     if (prefersReducedMotion) {
-//       return;
-//     }
-
-//     const timeout = setTimeout(() => {
-//       setIsMounted(true);
-//     }, 100);
-
-//     window.addEventListener('scroll', handleScroll);
-
-//     return () => {
-//       clearTimeout(timeout);
-//       window.removeEventListener('scroll', handleScroll);
-//     };
-//   }, []);
-
-//   const timeout = isHome ? loaderDelay : 0;
-//   const fadeClass = isHome ? 'fade' : '';
-//   const fadeDownClass = isHome ? 'fadedown' : '';
-
-//   const Logo = (
-//     <div className="logo" tabIndex="-1">
-//       {isHome ? (
-//         <a href="/" aria-label="home">
-//           <div className="hex-container">
-//             <IconHex />
-//           </div>
-//           <div className="logo-container">
-//             <IconLogo />
-//           </div>
-//         </a>
-//       ) : (
-//         <Link to="/" aria-label="home">
-//           <div className="hex-container">
-//             <IconHex />
-//           </div>
-//           <div className="logo-container">
-//             <IconLogo />
-//           </div>
-//         </Link>
-//       )}
-//     </div>
-//   );
-
-//   const ResumeLink = (
-//     <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-//       Resume
-//     </a>
-//   );
-
+  const toggleNavList = (id) => {
+    var element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView();
+    }
+    setShowNavList(!showNavList);
+  };
   return (
-
-    <div>hello world</div>
-    // <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
-    //   <StyledNav>
-    //     {prefersReducedMotion ? (
-    //       <>
-    //         {Logo}
-
-    //         <StyledLinks>
-    //           <ol>
-    //             {navLinks &&
-    //               navLinks.map(({ url, name }, i) => (
-    //                 <li key={i}>
-    //                   <Link to={url}>{name}</Link>
-    //                 </li>
-    //               ))}
-    //           </ol>
-    //           <div>{ResumeLink}</div>
-    //         </StyledLinks>
-
-    //         <Menu />
-    //       </>
-    //     ) : (
-    //       <>
-    //         <TransitionGroup component={null}>
-    //           {isMounted && (
-    //             <CSSTransition classNames={fadeClass} timeout={timeout}>
-    //               <>{Logo}</>
-    //             </CSSTransition>
-    //           )}
-    //         </TransitionGroup>
-
-    //         <StyledLinks>
-    //           <ol>
-    //             <TransitionGroup component={null}>
-    //               {isMounted &&
-    //                 navLinks &&
-    //                 navLinks.map(({ url, name }, i) => (
-    //                   <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
-    //                     <li key={i} style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
-    //                       <Link to={url}>{name}</Link>
-    //                     </li>
-    //                   </CSSTransition>
-    //                 ))}
-    //             </TransitionGroup>
-    //           </ol>
-
-    //           <TransitionGroup component={null}>
-    //             {isMounted && (
-    //               <CSSTransition classNames={fadeDownClass} timeout={timeout}>
-    //                 <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
-    //                   {ResumeLink}
-    //                 </div>
-    //               </CSSTransition>
-    //             )}
-    //           </TransitionGroup>
-    //         </StyledLinks>
-
-    //         <TransitionGroup component={null}>
-    //           {isMounted && (
-    //             <CSSTransition classNames={fadeClass} timeout={timeout}>
-    //               <Menu />
-    //             </CSSTransition>
-    //           )}
-    //         </TransitionGroup>
-    //       </>
-    //     )}
-    //   </StyledNav>
-    // </StyledHeader>
+    <>
+      <nav className="center nav">
+        <ul
+          style={{ display: showNavList ? "flex" : null }}
+          className="nav__list"
+        >
+          <li className="nav__list-item">
+            <a
+              href="#home"
+              onClick={() => toggleNavList("#home")}
+              className="link link--nav"
+            >
+              Home
+            </a>
+          </li>
+          <li className="nav__list-item">
+            <a
+              href="#about"
+              onClick={() => toggleNavList("#about")}
+              className="link link--nav"
+            >
+              About
+            </a>
+          </li>
+          <li className="nav__list-item">
+            <a
+              href="#skills"
+              onClick={() => toggleNavList("#skills")}
+              className="link link--nav"
+            >
+              Skills
+            </a>
+          </li>
+          <li className="nav__list-item">
+            <a
+              href="#projects"
+              onClick={() => toggleNavList("#projects")}
+              className="link link--nav"
+            >
+              Projects
+            </a>
+          </li>
+          <li className="nav__list-item">
+            <a
+              href="#contact"
+              onClick={() => toggleNavList("#contact")}
+              className="link link--nav"
+            >
+              Contact
+            </a>
+          </li>
+          <li className="nav__list-item">
+            <a
+              href="https://drive.google.com/file/d/1O7O6dgBNriadNFoYRj8kHr6-dyPyoG4n/view?usp=sharing"
+              onClick={toggleNavList}
+              className="link link--nav"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          onClick={toggeltheme}
+          className="btn btn--icon nav__theme"
+          aria-label="toggle theme"
+          style={{ backgroundColor: "inherit" }}
+        >
+          {themename === "dark" ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
+        </button>
+        <button
+          type="button"
+          onClick={toggleNavList}
+          className="btn btn--icon nav__hamburger"
+          aria-label="toggle navigation"
+        >
+          {showNavList ? <CloseIcon /> : <MenuIcon />}
+        </button>
+      </nav>
+    </>
   );
 };
-
-// Nav.propTypes = {
-//   isHome: PropTypes.bool,
-// };
 
 export default Nav;
