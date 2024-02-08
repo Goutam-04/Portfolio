@@ -1,0 +1,71 @@
+:root {
+    --primary-color: #7bb1bd;
+    --secondary-color: #bd7ba2;
+    --primary-bg: #2c3946;
+    --secondary-bg: #324252;
+    --tertiary-bg: #42566a;
+    --primary-border-radius: 4px;
+    --secondary-border-radius: 7px;
+    --red: #be7d7d;
+    --orange: #bd987e;
+    --yellow: #c5c387;
+    --green: #7bbe92;
+    --blue: #7cb2bd;
+    --purple: #9a88bf;
+    --pink: #be7aa1;
+    --cf-purple: #9a88bf;
+}
+
+html {
+    background-color: #2c3946;
+    color: #c3ccd4;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    color: #c3ccd4;
+    overflow-x: hidden;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #7bb1bd rgba(0, 0, 0, 0.1);
+}
+
+.App,
+.Main {
+    min-height: 300vh;
+}
+
+::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.1);
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7bb1bd;
+    border-radius: 4px;
+}
+
+a {
+    color: #7bb1bd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Flex {
+    display: flex;
+}
+
+.FlexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
