@@ -1,0 +1,206 @@
+.home {
+    width: 100%;
+    height: 85vh;
+    min-height: 33.15rem;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background: url('../../assets/img/keyart-border-left.webp'),
+      url('../../assets/img/keyart-border-right.webp');
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 0;
+  }
+  
+  .home__cover {
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    position: absolute;
+    min-height: 33.15rem;
+    height: 85vh;
+    background: url('../../assets/img/cover-home.webp') no-repeat center;
+    background-position-y: top;
+    background-size: cover;
+  }
+  
+  .home__main-container {
+    width: 100%;
+    height: 100%;
+    min-height: 31.25rem;
+    display: grid;
+    grid-template-rows: 16% 2fr auto auto;
+    background: url('../../assets/img/keyart-border-left.webp'),
+      url('../../assets/img/keyart-border-right.webp');
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 0;
+  }
+  
+  .home__top-line-container {
+    position: absolute;
+    top: 8px;
+    width: 100%;
+    left: 0px;
+    padding-left: 140px;
+    padding-right: 42px;
+    display: flex;
+  }
+  
+  .home__top-line-container p {
+    line-height: 16px;
+    text-transform: uppercase;
+    font-size: 0.4rem;
+    color: #c5c387;
+    filter: drop-shadow(0px 4px 14px black);
+  }
+  
+  .home__top-line-container:before {
+    background: #c5c387;
+    content: '';
+    height: 1px;
+    left: 42px;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    width: 95px;
+  }
+  
+  .home__top-line-container:after {
+    border-top: 1px solid #c5c387;
+    content: '';
+    display: inline-flex;
+    flex: 1 1 auto;
+    margin-top: 7px;
+  }
+  
+  .home__logos-container {
+    height: fit-content;
+    align-self: flex-end;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  
+  .home__logos-container a:last-child {
+    margin-top: 10px;
+  }
+  
+  .home__logos-container img {
+    width: 86px;
+  }
+  
+  .home__logos-container img:nth-child(2) {
+    width: 20px;
+  }
+  
+  .home__content-container {
+    width: fit-content;
+    margin: 0 auto 4rem;
+    padding: 0 1.6rem;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home__content-container .btn-play {
+    position: relative;
+  }
+  
+  .home__content-container--logo-edgerunners {
+    max-width: 100%;
+  }
+  
+  .home__social-container {
+    margin: 0 auto;
+  }
+  
+  .home__social-container a:not(:first-child) {
+    margin-left: 50px;
+  }
+  
+  .home__social-container .facebook,
+  .home__social-container .instagram,
+  .home__social-container .twitter {
+    width: 28px;
+    filter: drop-shadow(0px 4px 18px black);
+  }
+  
+  .home__social-container .facebook:hover,
+  .home__social-container .instagram:hover,
+  .home__social-container .twitter:hover {
+    transform: scale(1.1);
+    transition: 400ms;
+  }
+  
+  .home__bottom-separator-container {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    background: url('../../assets/img/separator-yellow.svg') no-repeat;
+    background-position: bottom;
+    background-size: cover;
+  }
+  
+  @media (min-width: 500px) {
+    .home__logos-container {
+      padding-right: 6rem;
+      justify-self: end;
+    }
+  
+    .home__logos-container a:last-child {
+      margin-top: 20px;
+    }
+  
+    .home__top-line-container p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (min-width: 1150px) {
+    .home {
+      min-height: 43.75rem;
+    }
+  
+    .home__cover {
+      min-height: 43.75rem;
+    }
+  
+    .home__social-container {
+      position: absolute;
+      right: 80px;
+      top: 20rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+  
+    .home__social-container a:not(:first-child) {
+      margin-left: 0;
+    }
+  }
+  
+  @media (max-width: 425px) and (min-height: 700px) {
+    .home .home__content-container .btn-play {
+      bottom: 20vh;
+    }
+  }
+  
+  @media (min-width: 425px) and (min-height: 700px) {
+    .home .home__content-container .btn-play {
+      bottom: 6rem;
+    }
+  }
+  
+  @media (min-width: 425px) and (min-height: 1000px) {
+    .home .home__content-container .btn-play {
+      bottom: 24vh;
+    }
+  
+    .home .home__social-container {
+      right: 4vw;
+      top: 30vh;
+    }
+  }
+  
