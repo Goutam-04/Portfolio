@@ -20,11 +20,14 @@ export const HomeCover = () => {
 
         <div className="home__logos-container">
           <a href="https://cdprojektred.com" target="_blank">
-            <img src={cdpred} alt="Logo of Cd Projekt Red" />
+            {/* <img src={cdpred} alt="Logo of Cd Projekt Red" /> */}
+            <img src='../../assets/img/logo-cdpred.svg' alt="Logo of Cd Projekt Red" />
           </a>
-          <img src={xMark} alt="x mark" />
+          {/* <img src={xMark} alt="x mark" /> */}
+          <img src='../../assets/img/x-mark.svg' alt="x mark" />
           <a href="https://www.st-trigger.co.jp" target="_blank">
-            <img src={trigger} alt="Logo of Trigger" />
+            {/* <img src={trigger} alt="Logo of Trigger" /> */}
+            <img src='../../assets/img/logo-trigger.svg' alt="Logo of Trigger" />
           </a>
         </div>
 
@@ -32,7 +35,8 @@ export const HomeCover = () => {
           {/* <BtnPlay link="https://www.youtube.com/watch?v=OiR_lMNlJko" /> */}
           <img
             className="home__content-container--logo-edgerunners"
-            src={logoEdgerunners}
+            // src={logoEdgerunners}
+            src='../../assets/img/logo-edgerunners.webp'
             alt="Logo Edgerunners"
           />
         </div>
