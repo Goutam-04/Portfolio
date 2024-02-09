@@ -1,25 +1,31 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-import { joinClassNames } from "../classes/Constants";
-import Footer from '@/components/footer/Footer'
-import Home from '../components/home';
-
-const inter = Inter({ subsets: ['latin'] })
+import './globals.css';
+import SideBar from '@/components/sidebar/Sidebar';
+import Navbar from '@/components/navbar/Navbar';
+import { ContactFormProvider, MenuProvider } from '@/provider/Provider';
+import { Toaster } from 'react-hot-toast';
 
 export const metadata = {
-  title: 'Blog App',
-  description: 'The best blog app!',
-}
+    title: 'portfolio',
+    description: 'personal portfolio',
+};
 
 export default function RootLayout({ children }) {
-  const isMobile = 0;
-  return (
-    
-<div className={joinClassNames("App", isMobile ? "Mobile" : "Desktop")}>
-<div className="Main">
-				<Home />
-			</div>
-  <Footer/>
-</div>
-  )
+    return (
+        <html lang="en">
+            <body>
+                <MenuProvider>
+                    <ContactFormProvider>
+                        <Toaster />
+                        <div className="flex">
+                            <SideBar />
+                            <main className="flex-1 pl-0 lg:pl-[300px]">
+                                <Navbar />
+                                {children}
+                            </main>
+                        </div>
+                    </ContactFormProvider>
+                </MenuProvider>
+            </body>
+        </html>
+    );
 }
