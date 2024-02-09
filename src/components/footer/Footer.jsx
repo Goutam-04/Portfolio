@@ -2,6 +2,7 @@
 
 import * as Feather from "react-feather";
 // import Icon from "../../../public/icon.png";
+import Tooltip from "../tooltip/Tooltip";
 import "./footer.css";
 
 const Footer = () => {
@@ -20,29 +21,29 @@ const Footer = () => {
             </div>
           </div>
           <div className="ContactSection Flex">
-            <div className="ContactEntry" onClick={contacts.website}>
+            <div className="ContactEntry" >
               <Feather.Globe />
-              {/* <Tooltip>Website</Tooltip> */}
+              <Tooltip>Website</Tooltip>
             </div>
 
-            <div className="ContactEntry" onClick={contacts.github}>
+            <div className="ContactEntry" >
               <Feather.GitHub />
-              {/* <Tooltip>GitHub</Tooltip> */}
+              <Tooltip>GitHub</Tooltip>
             </div>
 
-            <div className="ContactEntry" onClick={contacts.twitter}>
+            <div className="ContactEntry" >
               <Feather.Twitter />
-              {/* <Tooltip>Twitter</Tooltip> */}
+              <Tooltip>Twitter</Tooltip>
             </div>
 
-            <div className="ContactEntry" onClick={contacts.email}>
+            <div className="ContactEntry" >
               <Feather.Mail />
-              {/* <Tooltip>Email</Tooltip> */}
+              <Tooltip>Email</Tooltip>
             </div>
 
-            <div className="ContactEntry" onClick={contacts.discord}>
+            <div className="ContactEntry" >
               <Feather.MessageSquare />
-              {/* <Tooltip>Discord</Tooltip> */}
+              <Tooltip>Discord</Tooltip>
             </div>
           </div>
         </div>
