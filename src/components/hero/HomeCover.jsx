@@ -1,8 +1,8 @@
 // import { BtnPlay } from './BtnPlay';
-import { Facebook, Instagram, Twitter } from './Icons';
+// import { Facebook, Instagram, Twitter } from './Icons';
 
 // import cdpred from '../../assets/img/logo-cdpred.svg';
-import trigger from '../../assets/img/logo-trigger.svg';
+// import trigger from '../../assets/img/logo-trigger.svg';
 import xMark from '../../assets/img/x-mark.svg';
 import logoEdgerunners from '../../assets/img/logo-edgerunners.webp';
 import Image from 'next/image';
@@ -38,18 +38,6 @@ export const HomeCover = () => {
             width={100}
             height={100}
           />
-        </div>
-
-        <div className="home__social-container">
-          <a href="https://www.facebook.com/edgerunners" target="_blank">
-            <Facebook fill="#fcee0a" class="facebook" />
-          </a>
-          <a href="https://www.instagram.com/edgerunners" target="_blank">
-            <Instagram fill="#fcee0a" class="instagram" />
-          </a>
-          <a href="https://twitter.com/edgerunners" target="_blank">
-            <Twitter fill="#fcee0a" class="twitter" />
-          </a>
         </div>
       </div>
 
