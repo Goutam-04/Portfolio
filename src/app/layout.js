@@ -3,6 +3,7 @@ import SideBar from '@/components/sidebar/Sidebar';
 import Navbar from '@/components/navbar/Navbar';
 import { ContactFormProvider, MenuProvider } from '@/provider/Provider';
 import { Toaster } from 'react-hot-toast';
+import Footer from '@/components/footer/Footer';
 
 export const metadata = {
     title: 'portfolio',
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
                             <main className="flex-1 pl-0 lg:pl-[300px]">
                                 <Navbar />
                                 {children}
+                                <Footer/>
                             </main>
                         </div>
                     </ContactFormProvider>

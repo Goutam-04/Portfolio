@@ -1,10 +1,12 @@
 // import { BtnPlay } from './BtnPlay';
 import { Facebook, Instagram, Twitter } from './Icons';
 
-import cdpred from '../../assets/img/logo-cdpred.svg';
+// import cdpred from '../../assets/img/logo-cdpred.svg';
 import trigger from '../../assets/img/logo-trigger.svg';
 import xMark from '../../assets/img/x-mark.svg';
 import logoEdgerunners from '../../assets/img/logo-edgerunners.webp';
+import Image from 'next/image';
+
 
 import "./homecover.css"
 
@@ -20,24 +22,21 @@ export const HomeCover = () => {
 
         <div className="home__logos-container">
           <a href="https://cdprojektred.com" target="_blank">
-            {/* <img src={cdpred} alt="Logo of Cd Projekt Red" /> */}
-            <img src='../../assets/img/logo-cdpred.svg' alt="Logo of Cd Projekt Red" />
+            <Image src={xMark} alt="x mark" width={100} height={100} />
           </a>
-          {/* <img src={xMark} alt="x mark" /> */}
-          <img src='../../assets/img/x-mark.svg' alt="x mark" />
+          <Image src={xMark} alt="x mark" width={100} height={100} />
           <a href="https://www.st-trigger.co.jp" target="_blank">
-            {/* <img src={trigger} alt="Logo of Trigger" /> */}
-            <img src='../../assets/img/logo-trigger.svg' alt="Logo of Trigger" />
+            <Image src={xMark} alt="x mark" width={100} height={100} />
           </a>
         </div>
 
         <div className="home__content-container">
-          {/* <BtnPlay link="https://www.youtube.com/watch?v=OiR_lMNlJko" /> */}
-          <img
+          <Image
             className="home__content-container--logo-edgerunners"
-            // src={logoEdgerunners}
-            src='../../assets/img/logo-edgerunners.webp'
+            src={logoEdgerunners}
             alt="Logo Edgerunners"
+            width={100}
+            height={100}
           />
         </div>
 

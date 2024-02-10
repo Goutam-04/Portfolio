@@ -2,8 +2,9 @@
 
 import * as Feather from "react-feather";
 // import Icon from "../../../public/icon.png";
-import Tooltip from "../tooltip/Tooltip";
+// import Tooltip from "../tooltip/Tooltip";
 import "./footer.css";
+import Image from "next/image";
 
 const Footer = () => {
 
@@ -16,34 +17,34 @@ const Footer = () => {
             <div>
               <h2>Goutam</h2>
               <div>
-                Made with <img src="heart.svg" alt="♥" width={15} height={15} />
+                Made with <Image src="heart.svg" alt="♥" width={15} height={15} />
               </div>
             </div>
           </div>
           <div className="ContactSection Flex">
             <div className="ContactEntry" >
               <Feather.Globe />
-              <Tooltip>Website</Tooltip>
+              {/* <Tooltip>Website</Tooltip> */}
             </div>
 
             <div className="ContactEntry" >
               <Feather.GitHub />
-              <Tooltip>GitHub</Tooltip>
+              {/* <Tooltip>GitHub</Tooltip> */}
             </div>
 
             <div className="ContactEntry" >
               <Feather.Twitter />
-              <Tooltip>Twitter</Tooltip>
+              {/* <Tooltip>Twitter</Tooltip> */}
             </div>
 
             <div className="ContactEntry" >
               <Feather.Mail />
-              <Tooltip>Email</Tooltip>
+              {/* <Tooltip>Email</Tooltip> */}
             </div>
 
             <div className="ContactEntry" >
               <Feather.MessageSquare />
-              <Tooltip>Discord</Tooltip>
+              {/* <Tooltip>Discord</Tooltip> */}
             </div>
           </div>
         </div>
@@ -58,7 +59,7 @@ const Footer = () => {
             <a href="https://paypal.me/">
               <img src="heart.svg" alt="♥" width={15} height={15} />
               <span style={{ margin: "0 7px" }}>Donate</span>
-              <img src="heart.svg" alt="♥" width={15} height={15} />
+              <Image src="heart.svg" alt="♥" width={15} height={15} />
             </a>
 
             <div className="Copyright">
