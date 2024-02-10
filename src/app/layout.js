@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
                             <main className="flex-1 pl-0 lg:pl-[300px]">
                                 <Navbar />
                                 {children}
-                                <Footer/>
+                                {/* <Footer/> */}
                             </main>
                         </div>
                     </ContactFormProvider>

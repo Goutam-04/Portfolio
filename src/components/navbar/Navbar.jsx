@@ -6,7 +6,7 @@ import { useMenu } from '../../provider/Provider';
 const Navbar = ({}) => {
     const { showMenu, showMenuVisibility } = useMenu();
     return (
-        <nav className="flex sticky shadow-md top-0 z-20 bg-body p-5 text-info justify-between">
+        <nav className="flex sticky  top-0 z-1 bg-body p-5 text-info justify-between">
             {/* <SearchBar /> */}
             <div>{/* Place holder for search bar */}</div>
             <div className="flex items-center gap-5">
