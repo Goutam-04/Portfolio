@@ -1,4 +1,6 @@
-import { useState } from 'react';
+// 'use client'
+
+
 import {
   Code,
   Flame,
@@ -11,7 +13,7 @@ import {
   Twitter,
   Video,
   X,
-  Youtube,
+ 
 } from 'lucide-react';
 import List from './List';
 import { useMenu } from '../../provider/Provider';
