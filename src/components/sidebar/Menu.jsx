@@ -6,13 +6,9 @@ import {
   Home,
   Image as ImageIcon,
   Instagram,
-  Layers,
+  Mail,
   Linkedin,
-  Scissors,
-  Share2,
-  Shirt,
-  ShoppingCart,
-  Ticket,
+  Twitter,
   Video,
   X,
   Youtube,
@@ -35,47 +31,56 @@ const Menu = () => {
         <Home /> Home
       </List>
       <List link="/" effect="slideUp">
-        <Flame /> Trending
+        <Flame /> Skills
       </List>
       <List link="/" effect="slideUp">
-        <Code /> Snippets
+        <Code /> Projects
       </List>
       <List link="#" effect="slideUp">
-        <Video /> Videos
+        <Video /> Contact
       </List>
 
       {/* List 2 */}
       <div className="mt-5">Socials</div>
-      <List
-        target="_blank"
-        link="#"
-        effect="slideUp"
-      >
-        <Instagram color="#b5179e" /> Instagram
-      </List>
+ 
       <List target="_blank" link="https://github.com/Goutam-04" effect="slideUp">
         <Github color="#2a9d8f" /> Github
       </List>
+ 
       <List
         target="_blank"
-        link="#"
+        link="https://twitter.com/Goutam_004"
         effect="slideUp"
       >
-        <Youtube color="#e63946" /> Youtube
+        <Twitter color="#1DA1F2" /> Twitter
       </List>
+
+      {/* <a href='mailto:goutamnayak@gmail.com'> */}
+
       <List
         target="_blank"
-        link="#"
+        link="https://mail.google.com/mail/?view=cm&fs=1&su=SubjectText&body= IN goutamnayak2804@gmail.com you can contact me. Thank You!"
         effect="slideUp"
       >
-        <Layers color="#f77f00" /> Stack overflow
+        <Mail color="#e63946" /> Gmail
       </List>
+      {/* </a> */}
+      
+      
+      
       <List
         target="_blank"
-        link="#"
+        link="https://www.linkedin.com/in/goutam-kumar-nayak/"
         effect="slideUp"
       >
         <Linkedin color="#0277b5" /> Linkedin
+      </List>
+      <List
+        target="_blank"
+        link="https://www.instagram.com/goutam.kumarnayak/"
+        effect="slideUp"
+      >
+        <Instagram color="#b5179e" /> Instagram
       </List>
     </div>
   );
