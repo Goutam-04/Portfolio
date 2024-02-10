@@ -1,0 +1,214 @@
+/* CARD GALLERY */
+
+.gallery-section__cards-container--card-video,
+.gallery-section__cards-container--card-img {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  .card--img {
+    width: 100%;
+    height: 100%;
+    min-height: 120px;
+    max-height: 280px;
+    object-fit: cover;
+  }
+  .corner-transparent {
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    bottom: -1px;
+    left: -1px;
+    display: block;
+    position: absolute;
+    border-left: 24px solid black;
+    border-top: 24px solid transparent;
+  }
+  .btn-play {
+    position: absolute;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gallery-section__cards-container--card-img,
+  .gallery-section__cards-container--card-video {
+    width: 100%;
+  }
+}
+
+
+/* BTN PLAY */
+
+.btn-play {
+    width: 80px;
+    height: 50px;
+    padding-left: 6px;
+    display: flex;
+    place-content: center;
+    filter: drop-shadow(2px 2px 5px rgba(14, 14, 14, 0.5));
+    img {
+      width: 20px;
+    }
+  
+    &,
+    &::after {
+      background: linear-gradient(45deg, transparent 10%, $green 5%);
+      position: relative;
+    }
+  
+    &:hover {
+      background: linear-gradient(45deg, transparent 10%, $teal 5%);
+    }
+  
+    &::after {
+      --slice-0: inset(50% 50% 50% 50%);
+      --slice-1: inset(80% -6px 0 0);
+      --slice-2: inset(50% -6px 30% 0);
+      --slice-3: inset(10% -6px 85% 0);
+      --slice-4: inset(40% -6px 43% 0);
+      --slice-5: inset(80% -6px 5% 0);
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, transparent 10%, $teal 5%);
+      clip-path: var(--slice-0);
+    }
+  
+    &:hover::after {
+      animation: 1s glitch;
+      animation-timing-function: steps(2, end);
+    }
+  }
+  
+  @media (min-width: 425px) {
+    .btn-play {
+      width: 100px;
+      height: 64px;
+      img {
+        width: 30px;
+      }
+    }
+  }
+  
+  @media (max-height: 700px), screen and (max-width: 768px) {
+    .btn-play {
+      width: 74px;
+      height: 48px;
+      img {
+        width: 20px;
+      }
+    }
+  }
+  
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+  
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+  
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+  
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+  
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+  
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+  
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+  
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+  
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+  
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+  
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
+
+  
+  /* CONTROL BUTTON */
+
+  .control-btn {
+    width: 8.75rem;
+    height: 3.125rem;
+    font-size: 1.25rem;
+    font-family: $font-bold;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .control-btn--next {
+    background: linear-gradient(-45deg, transparent 6%, $green 5%);
+  }
+  
+  .control-btn--previous {
+    background: linear-gradient(45deg, transparent 6%, $green 5%);
+  }
+  
+  .control-btn--disabled-next {
+    background: linear-gradient(-45deg, transparent 6%, rgb(203, 203, 203) 5%);
+  }
+  
+  .control-btn--disabled-previous {
+    background: linear-gradient(45deg, transparent 6%, rgb(203, 203, 203) 5%);
+  }
+  
+  .control-btn--next:hover {
+    background-color: $teal;
+    background: linear-gradient(-45deg, transparent 6%, $teal 5%);
+  }
+  
+  .control-btn--previous:hover {
+    background-color: $teal;
+    background: linear-gradient(45deg, transparent 6%, $teal 5%);
+  }
+  
+  @media (max-width: 319px) {
+    .control-btn {
+      width: 7.5rem;
+    }
+  }
+  
