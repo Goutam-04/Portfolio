@@ -2,11 +2,11 @@ import { cn } from '../sidebar/Utils';
 
 const TechCard = ({ title, classaName, tech }) => {
   return (
-    <div className="flex-1 flex flex-col gap-4 bg-cardPrimary p-4 rounded-md shadow-lg">
+    <div className="flex-1 flex flex-col gap-4 bg-cardPrimary p-4 rounded-md shadow-lg bg-[#2c3946]">
       <div className="text-primary font-medium text-lg tracking-wider">
         {title}
       </div>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 ">
         {tech.map((item, i) => (
           <div
             key={i}

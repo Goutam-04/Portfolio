@@ -10,6 +10,8 @@ export default function Home() {
   return (
     
       <div >
+
+      
       <HomeCover/>
       {/* <Start/> */}
       <Skills/>
