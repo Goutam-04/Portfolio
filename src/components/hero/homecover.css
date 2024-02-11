@@ -114,7 +114,7 @@
   
   .home__bottom-separator-container {
     position: relative;
-    bottom: 0px;
+    bottom: 2rem;
     width: 100%;
     height: 30px;
     background: url('../../assets/img/separator-yellow.svg') no-repeat;
@@ -135,6 +135,8 @@
     .home__top-line-container p {
       font-size: 1rem;
     }
+    
+   
   }
   
   @media (min-width: 1150px) {
@@ -145,11 +147,21 @@
     .home__cover {
       min-height: 43.75rem;
     }
+    
+  }
+
+  @media (max-width:1021px) {
+    .home__bottom-separator-container{
+      bottom: 3rem;
+    }
   }
   
   @media (max-width: 425px) and (min-height: 700px) {
     .home .home__content-container .btn-play {
       bottom: 20vh;
+    }
+    .home__bottom-separator-container{
+      bottom: 3rem;
     }
   }
   
@@ -163,6 +175,7 @@
     .home .home__content-container .btn-play {
       bottom: 24vh;
     }
+    
 
   }
   
