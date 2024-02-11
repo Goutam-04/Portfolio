@@ -1,0 +1,103 @@
+.gallery-section__cards-container--card-video,
+.gallery-section__cards-container--card-img {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-section__cards-container--card-video .card--img,
+.gallery-section__cards-container--card-img .card--img {
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  max-height: 280px;
+  object-fit: cover;
+}
+
+.gallery-section__cards-container--card-video .corner-transparent,
+.gallery-section__cards-container--card-img .corner-transparent {
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  bottom: -1px;
+  left: -1px;
+  display: block;
+  position: absolute;
+  border-left: 24px solid black;
+  border-top: 24px solid transparent;
+}
+
+.gallery-section__cards-container--card-video .btn-play,
+.gallery-section__cards-container--card-img .btn-play {
+  position: absolute;
+}
+
+@media (min-width: 1440px) {
+  .gallery-section__cards-container--card-video,
+  .gallery-section__cards-container--card-img {
+    width: 100%;
+  }
+}
+
+
+
+/* not the card part */
+
+
+.gallery-section {
+    padding-bottom: 2rem;
+    background: #000 url('../../assets/img/separator-top.svg') repeat-x top;
+  }
+  
+  .gallery-section__title {
+    padding: 6rem 0 4rem;
+    font-size: 3.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: yellow; /* Assuming $yellow is defined elsewhere */
+  }
+  
+  .gallery-section__cards-container {
+    margin: 0 auto;
+    max-width: 105rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    gap: 2rem;
+  }
+  
+  .gallery-section__footer {
+    width: fit-content;
+    margin: 2rem auto 4rem;
+  }
+  
+  .gallery-page {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .gallery-section__footer--btn-container {
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 1040px) {
+    .gallery-section__cards-container {
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+  
