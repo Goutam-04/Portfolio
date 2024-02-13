@@ -1,6 +1,3 @@
-// 'use client'
-
-
 import {
   Code,
   Flame,
@@ -13,18 +10,36 @@ import {
   Twitter,
   Video,
   X,
- 
 } from 'lucide-react';
 import List from './List';
 import { useMenu } from '../../provider/Provider';
+import { Link } from 'react-feather';
 
 const Menu = () => {
   const { showMenuVisibility } = useMenu();
+
+  
+  // const handleResumeClick = () => {
+  //   window.location.href = '/resume.pdf';
+  // };
+
+  const handleResumeClick = () => {
+    window.open('/resume.pdf', '_blank'); 
+  };
+
   return (
     <div
       className="flex relative flex-col h-full p-5 bg-cardPrimary text-primary rounded-lg w-full overflow-y-auto pb-20 md:pb-5"
       onClick={() => showMenuVisibility(false)}
     >
+      {/* RESUME SECTION */}
+      <button
+        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+        onClick={handleResumeClick} // Attach onClick event handler
+      >
+        Resume
+      </button>
+
       <div className="block lg:hidden p-5 z-10 text-primary absolute right-0 top-0 cursor-pointer text-2xl">
         <X className={`text-primary`} />
       </div>
@@ -56,9 +71,6 @@ const Menu = () => {
       >
         <Twitter color="#1DA1F2" /> Twitter
       </List>
-
-      {/* <a href='mailto:goutamnayak@gmail.com'> */}
-
       <List
         target="_blank"
         link="https://mail.google.com/mail/?view=cm&fs=1&su=SubjectText&body= IN goutamnayak2804@gmail.com you can contact me. Thank You!"
@@ -66,16 +78,13 @@ const Menu = () => {
       >
         <Mail color="#e63946" /> Gmail
       </List>
-      {/* </a> */}
-      
-      
       
       <List
         target="_blank"
         link="https://www.linkedin.com/in/goutam-kumar-nayak/"
         effect="slideUp"
       >
-        <Linkedin color="#0277b5"  absoluteStrokeWidth='false' strokeWidth='4'/> Linkedin
+        <Linkedin color="#0277b5" absoluteStrokeWidth='false' strokeWidth='4' /> Linkedin
       </List>
       <List
         target="_blank"
@@ -89,4 +98,3 @@ const Menu = () => {
 };
 
 export default Menu;
-
