@@ -10,7 +10,31 @@ const ContactForm = () => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   }
-  
+  const handleValidation = (values) => {
+    const errors = {};
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    const numberRegex = /\d/;
+
+    if (!values.fullname) {
+      errors.fullname = "Enter your full name";
+    }
+    else if (numberRegex.test(values.fullname)) {
+      errors.fullname = "Full name can't be numbers!";
+    }
+    if (!values.email) {
+      errors.email = "Enter your email";
+    }
+    else if (!emailRegex.test(values.email)) {
+      errors.email = "Imvalid email format";
+    }
+    if (!values.message) {
+      errors.message = "Message field can't be empty";
+    }
+    else if (values.message.length < 10) {
+      errors.message = "The message should contain min. 10 characters";
+    }
+    return errors;
+  }
 
   const submitForm = (e) => {
     e.preventDefault();
