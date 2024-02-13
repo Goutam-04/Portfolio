@@ -9,7 +9,7 @@ const CardVideo = ({ img, alt, link }) => {
     return (
       <div className="gallery-section__cards-container--card-video">
         <span className='corner-transparent'></span>
-        <Image className="card--img" src={`/projects/${img}`} alt={alt} />
+        {/* <Image className="card--img" src={`/projects/${img}`} alt={alt} /> */}
         {/* <BtnPlay link={link} /> */}
       </div>
     );

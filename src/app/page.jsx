@@ -18,7 +18,7 @@ export default function Home() {
       <Skills/>
       <Project title="Projects" data={projectData} />
 
-      <Card/>
+      {/* <Card/> */}
 
     </div>
   );
