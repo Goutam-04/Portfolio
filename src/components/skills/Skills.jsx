@@ -6,7 +6,7 @@ const Skills = ({}) => {
       <div className="text-xl font-medium mt-2 text-zinc-200 mb-5">
         Skills I Have
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
         <TechCard
           title="Frontend"
           classaName="bg-[#4f91f2]"
@@ -15,20 +15,20 @@ const Skills = ({}) => {
             'CSS',
             'Tailwind',
             'Javascript',
-            'Typescript',
             'React Js',
             'Next Js 13',
+            'Gatsby Js'
           ]}
         />
         <TechCard
           title="Backend"
           classaName="bg-[#f37c36]"
-          tech={['Node Js', 'Express Js', 'BUN Js', 'Elysia', 'Next Auth']}
+          tech={['Node Js', 'Express Js', 'Next Auth','Socket IO']}
         />
         <TechCard
           title="Database"
           classaName="bg-[#e0558a]"
-          tech={['MySql', 'MongoDB', 'PostgreSQL', 'Redis', 'Elastic Search']}
+          tech={[ 'MongoDB',]}
         />
         <TechCard
           title="Devops"
@@ -37,11 +37,11 @@ const Skills = ({}) => {
             'Docker',
             'Kubernetes',
             'GIT',
-            'Jenkins',
-            'Ansible',
-            'Terraform',
-            'AWS',
           ]}
+        />     <TechCard
+          title="Tools"
+          classaName="bg-[#e0558a]"
+          tech={[ 'Postman','Canva','Adobe XD']}
         />
       </div>
     </div>
