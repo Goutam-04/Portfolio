@@ -1,33 +1,37 @@
 export const projectData = [
     {
       id: 1,
-      title: 'Discord Clone',
-      techStack: 'Next.js 13, React Hook Form, Zustand, Shadcn, Typescript',
-      imageUrl: 'discord-clone.jpeg',
-      href: 'https://github.com/nwaliaez/discord-clone',
+      title: 'Chat Site',
+      techStack: 'React, React Hook Form, Zustand, Shadcn, Typescript',
+      imageUrl: 'chat.jpg',
+      href: 'https://github.com/Goutam-04/chat-app',
+      demo: 'https://github.com/Goutam-04/chat-app',
     },
     {
       id: 2,
-      title: 'Spotify Clone',
+      title: 'Bolgging Site',
       techStack:
         'Next.js 13, React Hook Form, Zustand, Radix UI, Typescript, Tailwind CSS',
-      imageUrl: 'spotify-clone.gif',
-      href: 'https://github.com/nwaliaez/spotify-clone',
+      imageUrl: 'blog.png',
+      href: 'https://github.com/Goutam-04/Blogging',
+      demo:'https://blogging-smoky.vercel.app/'
     },
     {
       id: 3,
-      title: 'Amazon Clone',
+      title: 'Typing Game',
       techStack:
         'NodeJs, Express, Mongoose, Next.js 13, Next Auth, React Hook Form, Typescript, Tailwind CSS',
-      imageUrl: 'amazon-clone.jpeg',
-      href: 'https://github.com/nwaliaez/eCommerce',
+      imageUrl: 'typing.png',
+      href: 'https://github.com/Goutam-04/Typing-game',
+      demo:'https://typing-game-silk.vercel.app/'
     },
     {
       id: 4,
-      title: 'DALL·E Clone',
+      title: 'E-commerce Site',
       techStack: 'OpenAI, Nodejs, Express, Mongoose, ReactJS, Tailwind CSS',
-      imageUrl: 'dalle-clone.webp',
-      href: 'https://github.com/nwaliaez/dalleClone',
+      imageUrl: 'ecommerce.jpg',
+      href: 'https://github.com/Goutam-04/E-Commerce',
+      demo: 'https://github.com/Goutam-04/E-Commerce',
     },
   ];
   
