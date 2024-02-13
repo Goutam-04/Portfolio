@@ -41,7 +41,7 @@ const Skills = ({}) => {
         />     <TechCard
           title="Tools"
           classaName="bg-[#e0558a]"
-          tech={[ 'Postman','Canva','Adobe XD']}
+          tech={[ 'Postman','Linux OS','Canva','Adobe XD']}
         />
       </div>
     </div>

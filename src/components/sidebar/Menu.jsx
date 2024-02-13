@@ -75,7 +75,7 @@ const Menu = () => {
         link="https://www.linkedin.com/in/goutam-kumar-nayak/"
         effect="slideUp"
       >
-        <Linkedin color="#0277b5" /> Linkedin
+        <Linkedin color="#0277b5"  absoluteStrokeWidth='false' strokeWidth='4'/> Linkedin
       </List>
       <List
         target="_blank"

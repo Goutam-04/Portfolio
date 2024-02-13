@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "eslint": "8.48.0",
