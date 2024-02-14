@@ -13,7 +13,7 @@ export const Start = () => {
         target="_blank">
         <Image src={logoNetflix} alt="logo Netflix" />
       </a>
-      <img
+      <Image
         className="date-release__separator"
         src={separatorSection}
         alt="separator sections"
