@@ -2,8 +2,8 @@
 // import { Facebook, Instagram, Twitter } from './Icons';
 
 // import cdpred from '../../assets/img/logo-cdpred.svg';
-import trigger from "../../assets/img/logo-trigger.svg";
-import xMark from "../../assets/img/x-mark.svg";
+// import trigger from "../../assets/img/logo-trigger.svg";
+// import xMark from "../../assets/img/x-mark.svg";
 import logoEdgerunners from "../../assets/img/logo-edgerunners.webp";
 import Image from "next/image";
 

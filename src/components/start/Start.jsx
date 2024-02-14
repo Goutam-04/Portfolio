@@ -1,6 +1,7 @@
 import logoNetflix from '../../assets/img/logo-netflix.svg';
 import separatorSection from '../../assets/img/separator-section-big.svg';
 import "./start.css"
+import Image from 'next/image';
 
 export const Start = () => {
   return (
@@ -10,7 +11,7 @@ export const Start = () => {
         className="date-release__link-netflix"
         href="https://www.netflix.com/cl/title/81054853"
         target="_blank">
-        <img src={logoNetflix} alt="logo Netflix" />
+        <Image src={logoNetflix} alt="logo Netflix" />
       </a>
       <img
         className="date-release__separator"

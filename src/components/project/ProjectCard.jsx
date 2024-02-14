@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardHeader, CardBody, Image, Button } from "@nextui-org/react";
 
-export default function ProjectsCard({ title, src, href, techStack }) {
+export default function ProjectsCard({ title, src, href, techStack,demo }) {
   return (
     <Card className="py-4 border-2 border-gray-300 rounded-lg overflow-hidden" style={{ width: '290px', height: '450px' }}>
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
@@ -26,7 +26,7 @@ export default function ProjectsCard({ title, src, href, techStack }) {
       Code
     </a>
 
-    <a href={href} target="_blank" rel="noopener noreferrer" className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+    <a href={demo} target="_blank" rel="noopener noreferrer" className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
       Demo
     </a>
 </div>

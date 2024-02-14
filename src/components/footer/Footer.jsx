@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="Flex">
         <div className="LeftSections">
           <div className="HeadSection FlexCenter">
-            <img className="Logo" src="./icon.png" alt="Logo" />
+            <Image className="Logo" src="./icon.png" alt="Logo" />
             <div>
               <h2>Goutam</h2>
               <div>
@@ -57,7 +57,7 @@ const Footer = () => {
             <a href="https://feathericons.com/">Icons Used</a>
             <a href="https://metalloriff.github.io/city-fog">Color Palette</a>
             <a href="https://paypal.me/">
-              <img src="heart.svg" alt="♥" width={15} height={15} />
+              <Image src="heart.svg" alt="♥" width={15} height={15} />
               <span style={{ margin: "0 7px" }}>Donate</span>
               <Image src="heart.svg" alt="♥" width={15} height={15} />
             </a>

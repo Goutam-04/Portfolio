@@ -16,6 +16,7 @@ const Project = ({ title, data }) => {
               data.map((card)=>(
                 <ProjectCard
                     href={card.href}
+                    demo={card.demo}
        key={card.id}
        title={card.title}
        src={card.imageUrl}
