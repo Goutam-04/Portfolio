@@ -1,14 +1,14 @@
 'use client'
 
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import "./contact.css"
 // import { Footer } from "../../components";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
-  useEffect(() => {
-    document.title = "Contact | Sophia Martinez";
-  })
+  // useEffect(() => {
+  //   document.title = "Contact | Sophia Martinez";
+  // })
   return (
     <article className="contact-main">
       <h2 className="title-font pink-text h2-tag">Contact Me</h2>
