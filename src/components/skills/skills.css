@@ -1,99 +1,14 @@
-.summary-section {
-    overflow: hidden;
-  }
-  
-  .summary-section p {
-    max-width: 56ch;
-    margin: 0 auto;
-    padding: 2.25rem 2rem 3rem;
-    font-size: 1.5rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: $font-bold;
-  }
-  
-  .summary-section p:last-child {
-    padding-top: 3rem;
-  }
-  
-  .summary-section__img-container {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .summary-section__img-container img {
-    width: 100%;
-  }
-  
-  .summary-section__img-container--img-left,
-  .summary-section__img-container--img-right {
-    position: relative;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  
-  .summary-section__img-container--img-left .corner-transparent,
-  .summary-section__img-container--img-right .corner-transparent {
-    z-index: 1;
-    height: 25px;
-    position: absolute;
-  }
-  
-  .summary-section__img-container--img-left .corner-transparent {
-    bottom: 0;
-    left: 0px;
-    border-left: 24px solid $yellow;
-    border-top: 24px solid transparent;
-  }
-  
-  .summary-section__img-container--img-right .corner-transparent {
-    top: 0;
-    right: 0px;
-    border-right: 24px solid $yellow;
-    border-bottom: 24px solid transparent;
-  }
-  
-  @media (min-width: 550px) {
-    .summary-section p {
-      padding-bottom: 6rem;
-    }
-  
-    .summary-section p:last-child {
-      padding-top: 5rem;
-    }
-  
-    .summary-section__img-container {
-      max-width: 1000px;
-      flex-direction: row;
-    }
-  
-    .summary-section__img-container--img-left {
-      z-index: 1;
-      width: 50%;
-      top: -40px;
-      left: 20px;
-    }
-  
-    .summary-section__img-container--img-right {
-      width: 50%;
-      bottom: -40px;
-      right: 20px;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .summary-section p {
-      padding: 6.25rem 2rem 8rem;
-      font-size: 2.5rem;
-    }
-  
-    .summary-section p:last-child {
-      padding-top: 8rem;
-    }
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+@font-face {
+  font-family: "Sddystopiandemo";
+  src: url("../../assets/fonts/Sddystopiandemo-GO7xa.otf");
+  /* src: url("/fonts/BlenderPro-Bold.woff2"); */
+}
+
+.jatt{
+  text-transform: uppercase;
+  font-family: "Sddystopiandemo"; /* Fallback to sans-serif if Protest Riot fails to load */
+  font-weight: 400;
+  font-style: normal;
+}
