@@ -35,10 +35,24 @@ const Menu = () => {
       {/* RESUME SECTION */}
       <button
         className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-        onClick={handleResumeClick} // Attach onClick event handler
+        onClick={handleResumeClick} 
       >
         Resume
       </button>
+
+      
+      {/* <div class="grid gap-8 items-start justify-center">
+  <div class="relative group">
+    <div class="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+    <button class="relative px-10 py-4 bg-[#2c3946] rounded-lg leading-none flex items-center" onClick={handleResumeClick}>
+      <span class="text-gray-300">Resume</span>
+    </button>
+  </div>
+</div> */}
+
+
+
+      {/* the cross for navigation on phone */}
 
       <div className="block lg:hidden p-5 z-10 text-primary absolute right-0 top-0 cursor-pointer text-2xl">
         <X className={`text-primary`} />

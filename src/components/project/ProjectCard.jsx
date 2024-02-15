@@ -29,8 +29,8 @@ export default function ProjectsCard({ title, src, href, techStack, demo }) {
       {/* TRYING CYBER BUTTONS */}
       <footer className="gallery-section__footer">
         <div className="gallery-section__footer--btn-container">
-          <BtnPrevious  text="previous"  />
-          <BtnNext  text="next"  />
+          <BtnPrevious  text="Code" href={href}  />
+          <BtnNext  text="Demo" demo={demo}  />
         </div>
       </footer>
 
