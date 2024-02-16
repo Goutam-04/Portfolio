@@ -155,14 +155,17 @@
       bottom: 3rem;
     }
   }
+  @media (max-width:425px) {
+    .home__bottom-separator-container{
+      bottom: 0rem;
+    }
+  }
   
   @media (max-width: 425px) and (min-height: 700px) {
     .home .home__content-container .btn-play {
       bottom: 20vh;
     }
-    .home__bottom-separator-container{
-      bottom: 3rem;
-    }
+
   }
   
   @media (min-width: 425px) and (min-height: 700px) {

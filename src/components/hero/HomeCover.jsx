@@ -21,31 +21,27 @@ export const HomeCover = () => {
 
         {/* MAIN HOME PART */}
         <div className=" w-full">
-          <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-            <div className="flex flex-col justify-center items-center h-full">
-              <h2 className="text-4xl sm:text-6xl font-bold text-primary-t">
+          <div className="max-w-screen-lg mx-auto flex flex-row items-center justify-center h-full px-4 md:flex-row">
+            <div className="flex flex-col justify-center items-center md:items-start h-full">
+              <h2 className="text-4xl sm:text-6xl font-bold text-primary-t text-center">
                 {/* I'm a Software Developer */}
-                I&apos;m a Software Developer
+                Hi I&apos;m<span className="text-button"> &lt;/</span>Goutam
+                Nayak<span className="text-button">/&gt;</span>
               </h2>
-              <p className="text-primary-t text-lg md:text-xl py-4 pt-5 max-w-md">
-                I am a Btech undergraduate who love to build and desgin
-                software. Currently, I am working on web application using
-                technologies like React and Tailwind.
+              <p className="text-primary-t text-md md:text-xl py-4 pt-5">
+                I am a{" "}
+                <span className="inline-block border-2 border-border rounded-full font-bold text-lg px-3 py-2 mr-1 md:mr-2 text-white">
+                  Web Developer / Graphic Designer
+                </span>{" "}
+                who likes coding cool stuff for cool people.
               </p>
-            </div>
 
-            <div>
-              <Image
-                src={logoEdgerunners}
-                alt="my profile"
-                className="md:rounded-s-full ml-8 max-h-full md:max-h-screen w-4/5 md:w-full overflow-hidden"
-              />
-              {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/t3M1XDfhapwa0KPR/scene.splinecode"></spline-viewer> */}
+              <button className="bg-transparent hover:bg-button text-yellow  mt-20 font-semibold hover:text-white py-3 px-6 md:px-8 border border-yellow hover:border-transparent rounded">
+                Reach Out
+              </button>
             </div>
           </div>
         </div>
-
       </div>
 
       <div className="home__bottom-separator-container"></div>
