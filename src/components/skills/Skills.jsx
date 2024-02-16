@@ -12,7 +12,7 @@ const Skills = ({}) => {
           title="Frontend"
           classaName="bg-[#4f91f2]"
           tech={[
-            'HTML',
+            'HTML5',
             'CSS',
             'Tailwind',
             'Javascript',
