@@ -1,5 +1,6 @@
 'use client'
 
+import Footer from "../footer/Footer";
 import "./contact.css";
 import ContactForm from "./ContactForm";
 import Image from "next/image";
@@ -22,6 +23,7 @@ const Contact = () => {
             <Image src="/gifs/man.gif" alt="Man GIF" className="w-full h-full" width={500} height={500} /> {/* Set the width and height as per your requirement */}
           </div>
         </div>
+        <Footer/>
       </article>
     </>
   );

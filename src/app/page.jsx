@@ -5,6 +5,7 @@ import  Skills  from "@/components/skills/Skills";
 import  Project  from "@/components/project/Project";
 import Card from "@/components/card/Card";
 import  Contact  from "@/components/contact/Contact";
+import  Footer  from "@/components/footer/Footer";
 
 
 import { projectData } from '../components/project/data';
@@ -22,6 +23,7 @@ export default function Home() {
       <Contact/>
 
       {/* <Card/> */}
+      {/* <Footer/> */}
 
     </div>
   );
