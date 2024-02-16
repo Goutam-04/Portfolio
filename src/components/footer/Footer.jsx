@@ -7,7 +7,7 @@
         href="https://github.com/Goutam-04"
         className="footer__link-page text-center text-button"
         target="_blank">
-        copyright by Goutam @2024
+        Made by Goutam @2024
       </a>
     </footer>
   );

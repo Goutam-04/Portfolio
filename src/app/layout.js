@@ -6,7 +6,7 @@ import { Toaster } from 'react-hot-toast';
 import Footer from '@/components/footer/Footer';
 
 export const metadata = {
-    title: 'portfolio',
+    title: 'Goutam | Portfolio',
     description: 'personal portfolio',
 };
 
