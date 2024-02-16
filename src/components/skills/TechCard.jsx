@@ -2,7 +2,7 @@ import { cn } from '../sidebar/Utils';
 
 const TechCard = ({ title, classaName, tech }) => {
   return (
-    <div className="flex-1 flex flex-col gap-4 bg-cardPrimary p-4 rounded-md hover:shadow-xl bg-[#132a43]">
+    <div className="flex-1 flex flex-col gap-4 bg-cardPrimary p-4 rounded-md hover:shadow-xl bg-[#132a43] ">
       <div className="text-primary-t text-center font-medium text-lg tracking-wider">
         {title}
       </div>

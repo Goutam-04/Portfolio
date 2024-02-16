@@ -34,7 +34,7 @@ const Menu = () => {
     >
       {/* RESUME SECTION */}
       <button
-        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+        className="bg-transparent hover:bg-button text-yellow font-semibold hover:text-white py-2 px-4 border border-yellow hover:border-transparent rounded"
         onClick={handleResumeClick} 
       >
         Resume
@@ -54,8 +54,8 @@ const Menu = () => {
 
       {/* the cross for navigation on phone */}
 
-      <div className="block lg:hidden p-5 z-10 text-primary absolute right-0 top-0 cursor-pointer text-2xl">
-        <X className={`text-primary`} />
+      <div className="block lg:hidden p-5 z-10 text-primary-t absolute right-0 top-0 cursor-pointer text-2xl">
+        <X className={`text-primary-t`} />
       </div>
       {/* List 1 */}
       <List link="/" effect="slideUp">

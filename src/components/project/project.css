@@ -27,36 +27,36 @@
   }
   
   .control-btn--next {
-    background: linear-gradient(-45deg, transparent 6%, #4bff20 5%);
+    background: linear-gradient(-45deg, transparent 6%, #63345e 5%);
   }
   
   .control-btn--previous {
-    background: linear-gradient(45deg, transparent 6%, #4bff20 5%);
+    background: linear-gradient(45deg, transparent 6%, #63345e 5%);
   }
   
   .control-btn--disabled-next {
-    background: linear-gradient(-45deg, transparent 6%, rgb(203, 203, 203) 5%);
+    background: linear-gradient(-45deg, transparent 6%, #0b468c 5%);
   }
   
   .control-btn--disabled-previous {
-    background: linear-gradient(45deg, transparent 6%, rgb(203, 203, 203) 5%);
+    background: linear-gradient(45deg, transparent 6%, #0b468c 5%);
   }
   
   .control-btn--next:hover {
-    background-color: #00effe;
-    background: linear-gradient(-45deg, transparent 6%, #00effe 5%);
+    background-color: #ac61b9;
+    background: linear-gradient(-45deg, transparent 6%, #ac61b9 5%);
   }
 
   /* ------------------------------------ */
   .control-btn--disabled-next:hover {
     background-color: #00effe;
-    background: linear-gradient(-45deg, transparent 6%, #00effe 5%);
+    background: linear-gradient(-45deg, transparent 6%, #ac61b9 5%);
   }
   /* --------------------------------------------------- */
   
   .control-btn--previous:hover {
     background-color: #00effe;
-    background: linear-gradient(45deg, transparent 6%, #00effe 5%);
+    background: linear-gradient(45deg, transparent 6%, #ac61b9 5%);
   }
   
   @media (max-width: 319px) {
