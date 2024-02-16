@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./contact.css"
 
 const ContactForm = () => {
   const [formValues, setFormValues] = useState({ fullname: "", email: "", message: "" });
@@ -10,6 +9,7 @@ const ContactForm = () => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   }
+
   const handleValidation = (values) => {
     const errors = {};
     const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
@@ -25,7 +25,7 @@ const ContactForm = () => {
       errors.email = "Enter your email";
     }
     else if (!emailRegex.test(values.email)) {
-      errors.email = "Imvalid email format";
+      errors.email = "Invalid email format";
     }
     if (!values.message) {
       errors.message = "Message field can't be empty";
@@ -47,45 +47,44 @@ const ContactForm = () => {
       setFormValues({ fullname: "", email: "", message: "" });
     }
   }
+
   return (
-    <section className="contact-us-form ">
+    <section className="contact-us-form">
       {submit ?
-        <section className="form-success">
-          <h3>Message successfully sent!</h3>
-          <p>I will get back to you as soon as possible!</p>
-          <button type="button" onClick={() => setSubmit(false)}>Send again</button>
+        <section className="form-success flex flex-col items-center">
+          <h3 className="text-primary text-2xl">Message successfully sent!</h3>
+          <p className="text-white text-lg">I will get back to you as soon as possible!</p>
+          <button className="mt-4 px-4 py-2 bg-primary border border-white text-white rounded-md hover:bg-secondary hover:border-secondary hover:text-primary transition duration-300" type="button" onClick={() => setSubmit(false)}>Send again</button>
         </section> :
         <form className="contact-form form-tag" onSubmit={submitForm}>
-          <section className="contact-form-item">
+          <section className="contact-form-item relative">
             <input
               onChange={handleChange}
               value={formValues.fullname}
-              className="fullname-input"
+              className="fullname-input w-full bg-gray-800 border-b-2 border-primary py-2 px-3 text-white placeholder-gray-400 focus:outline-none focus:border-secondary"
               type="text"
               placeholder="Full name"
               name="fullname"
             />
-            <br></br>
-            <label className="fullname-error">{formErrors.fullname}</label>
+            {formErrors.fullname && <label className="fullname-error text-red-500 absolute -bottom-6 left-0">{formErrors.fullname}</label>}
           </section>
-          <section className="contact-form-item">
+          <section className="contact-form-item relative">
             <input onChange={handleChange}
-              value={formValues.email} name="email" className="email-input" type="text" placeholder="Email" />
-            <br></br>
-            <label className="email-error">{formErrors.email}</label>
+              value={formValues.email} name="email" className="email-input w-full bg-gray-800 border-b-2 border-primary py-2 px-3 text-white placeholder-gray-400 focus:outline-none focus:border-secondary"
+              type="text" placeholder="Email" />
+            {formErrors.email && <label className="email-error text-red-500 absolute -bottom-6 left-0">{formErrors.email}</label>}
           </section>
-          <section className="contact-form-item">
+          <section className="contact-form-item relative">
             <textarea
               onChange={handleChange}
-              value={formValues.message} name="message" className="textarea-input" placeholder="Message" />
-            <br></br>
-            <label className="textarea-error">{formErrors.message}</label>
+              value={formValues.message} name="message" className="textarea-input w-full bg-gray-800 border-b-2 border-primary py-2 px-3 text-white placeholder-gray-400 focus:outline-none focus:border-secondary"
+              placeholder="Message" />
+            {formErrors.message && <label className="textarea-error text-red-500 absolute -bottom-6 left-0">{formErrors.message}</label>}
           </section>
           <section className="contact-form-item">
-            <button type="submit">
+            <button className="mt-4 px-4 py-2 bg-primary border border-white text-white rounded-md hover:bg-secondary hover:border-secondary hover:text-primary transition duration-300" type="submit">
               Send
             </button>
-            <br></br>
           </section>
         </form>}
     </section>

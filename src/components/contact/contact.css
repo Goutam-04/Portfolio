@@ -42,14 +42,7 @@
   font-family: 'Inter', sans-serif;
 }
 
-.form-success h3 {
-  color: #0b468c;
-}
 
-.form-success p {
-  font-size: 1rem;
-  color: #fff;
-}
 
 .form-success button {
   background-color: transparent;
@@ -85,7 +78,6 @@
   width: 100%;
   border-width: 0;
   outline: none;
-  background-color: #2b2b2b;
   padding: 1rem;
   box-sizing: border-box;
 }
