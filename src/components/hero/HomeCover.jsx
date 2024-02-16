@@ -25,18 +25,23 @@ export const HomeCover = () => {
             <div className="flex flex-col justify-center items-center md:items-start h-full">
               <h2 className="text-4xl sm:text-6xl font-bold text-primary-t text-center">
                 {/* I'm a Software Developer */}
-                Hi I&apos;m<span className="text-button"> &lt;/</span>Goutam
-                Nayak<span className="text-button">/&gt;</span>
+                Hi I&apos;m
+                <br className="sm:hidden inline" />
+                <span className="text-button text-2xl sm:text-6xl"> &lt;/</span>
+                <span className="text-xl sm:text-6xl">Goutam Nayak</span>
+                <span className="text-button text-2xl sm:text-6xl">/&gt;</span>
               </h2>
-              <p className="text-primary-t text-md md:text-xl py-4 pt-5">
-                I am a{" "}
-                <span className="inline-block border-2 border-border rounded-full font-bold text-lg px-3 py-2 mr-1 md:mr-2 text-white">
+
+              <p className="text-primary-t text-sm md:text-xl py-4 pt-5 text-center">
+                I am a<br className="sm:hidden inline" />{" "}
+                <span className="inline-block font-bold text-md md:text-base px-0.5 md:px-1 py-0.25 md:py-0.5 mr-0.5 md:mr-1 text-white  border-border rounded-full md:border-2 border-none">
                   Web Developer / Graphic Designer
-                </span>{" "}
-                who likes coding cool stuff for cool people.
+                </span>
+                <br className="sm:hidden inline" /> who likes coding cool stuff
+                for cool people.
               </p>
 
-              <button className="bg-transparent hover:bg-button text-yellow  mt-20 font-semibold hover:text-white py-3 px-6 md:px-8 border border-yellow hover:border-transparent rounded">
+              <button className="bg-transparent hover:bg-button text-yellow  mt-12 md:mt-16 font-semibold hover:text-white py-3 px-6 md:px-8 border border-yellow hover:border-transparent rounded">
                 Reach Out
               </button>
             </div>
