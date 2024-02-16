@@ -23,11 +23,11 @@ export const HomeCover = () => {
         <div className=" w-full">
           <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
             <div className="flex flex-col justify-center items-center h-full">
-              <h2 className="text-4xl sm:text-6xl font-bold text-white">
+              <h2 className="text-4xl sm:text-6xl font-bold text-primary-t">
                 {/* I'm a Software Developer */}
                 I&apos;m a Software Developer
               </h2>
-              <p className="text-gray-300 text-lg md:text-xl py-4 pt-5 max-w-md">
+              <p className="text-primary-t text-lg md:text-xl py-4 pt-5 max-w-md">
                 I am a Btech undergraduate who love to build and desgin
                 software. Currently, I am working on web application using
                 technologies like React and Tailwind.
@@ -40,6 +40,8 @@ export const HomeCover = () => {
                 alt="my profile"
                 className="md:rounded-s-full ml-8 max-h-full md:max-h-screen w-4/5 md:w-full overflow-hidden"
               />
+              {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/t3M1XDfhapwa0KPR/scene.splinecode"></spline-viewer> */}
             </div>
           </div>
         </div>

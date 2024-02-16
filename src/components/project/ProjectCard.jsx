@@ -5,7 +5,7 @@ import { Card, CardHeader, CardBody, Image, Button } from "@nextui-org/react";
 export default function ProjectsCard({ title, src, href, techStack, demo }) {
   return (
     <Card
-      className="py-4 border-2 border-slate-500 rounded-lg overflow-hidden"
+      className="py-4 border-2 border-border rounded-lg overflow-hidden"
       style={{ width: "290px", height: "450px" }}
     >
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">

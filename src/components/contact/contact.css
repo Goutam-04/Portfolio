@@ -1,6 +1,7 @@
 /* CONTACT */
 .contact,
 .contact-main {
+  position: absolute;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -42,7 +43,7 @@
 }
 
 .form-success h3 {
-  color: #fd1056;
+  color: #0b468c;
 }
 
 .form-success p {
@@ -62,7 +63,7 @@
   max-width: 50%;
   text-align: center;
   opacity: 0.9;
-  background: linear-gradient(to right, #fd1056 50%, transparent 50%);
+  background: linear-gradient(to right, #0b468c 50%, transparent 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.4s ease;
@@ -124,7 +125,7 @@
 
 .contact-form label {
   position: absolute;
-  color: #fd1056;
+  color: #ac61b9;
   opacity: 0.7;
 }
 

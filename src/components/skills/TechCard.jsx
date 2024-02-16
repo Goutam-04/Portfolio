@@ -2,16 +2,16 @@ import { cn } from '../sidebar/Utils';
 
 const TechCard = ({ title, classaName, tech }) => {
   return (
-    <div className="flex-1 flex flex-col gap-4 bg-cardPrimary p-4 rounded-md hover:shadow-xl bg-[#182737]">
-      <div className="text-primary font-medium text-lg tracking-wider">
+    <div className="flex-1 flex flex-col gap-4 bg-cardPrimary p-4 rounded-md hover:shadow-xl bg-[#132a43]">
+      <div className="text-primary-t text-center font-medium text-lg tracking-wider">
         {title}
       </div>
-      <div className="flex flex-wrap gap-2 ">
+      <div className="flex flex-wrap gap-2  ">
         {tech.map((item, i) => (
           <div
             key={i}
             className={cn(
-              'rounded-md bg-body text-xs text-primary p-2',
+              'rounded-md bg-body text-xs text-primary-t p-2',
               item === 'Tailwind' && 'border border-blue-500/60',
               item === 'Javascript' && 'border border-yellow-500/60',
               item === 'React Js' && 'border border-blue-500/60',
