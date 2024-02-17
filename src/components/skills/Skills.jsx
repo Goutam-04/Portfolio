@@ -4,7 +4,7 @@ import "./skills.css"
 const Skills = ({}) => {
   return (
     <div className="col-span-2 p-6 md:col-span-2 lg:col-span-3 ">
-      <div className="text-xl font-medium mt-2 text-primary-t mb-5 text-center jatt">
+      <div className="text-xl font-medium mt-2 text-primary-t mb-5 text-center">
         Skills I Have
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">

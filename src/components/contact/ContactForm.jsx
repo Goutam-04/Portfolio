@@ -120,7 +120,7 @@ async function handleSubmit(event) {
               placeholder="Message" />
             {formErrors.message && <label className="textarea-error text-red-500 absolute -bottom-6 left-0">{formErrors.message}</label>}
           </section>
-          <section className="contact-form-item">
+          <section className="contact-form-item flex justify-center items-center">
             <button className="flex justify-center items-center mt-4 px-4 py-1 bg-transparent border border-white text-primary-t rounded-md hover:bg-button hover:border-border hover:text-white transition duration-300" type="submit">
               Send&nbsp;<ChevronRightCircle size={20}/>
             </button>
