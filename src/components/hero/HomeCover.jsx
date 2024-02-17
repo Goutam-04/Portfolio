@@ -12,6 +12,8 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import TextTransition, { presets } from "react-text-transition";
 
+import Link from "next/link";
+
 import "./homecover.css";
 
 export const HomeCover = () => {
@@ -33,7 +35,7 @@ export const HomeCover = () => {
   }, []);
 
   return (
-    <section className="home">
+    <section id="home" className="home">
       <div className="home__cover"></div>
 
       <div className="home__main-container">
@@ -72,10 +74,12 @@ export const HomeCover = () => {
                 <br className="sm:hidden inline" /> who likes coding cool stuff
                 for cool people.
               </div>
+              <Link href="#contact">
 
               <button className="bg-transparent hover:bg-button text-yellow  mt-12 md:mt-16 font-semibold hover:text-white py-3 px-6 md:px-8 border border-yellow hover:border-transparent rounded">
                 Reach Out
               </button>
+              </Link>
             </div>
           </div>
         </div>

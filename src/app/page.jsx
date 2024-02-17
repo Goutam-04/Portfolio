@@ -6,6 +6,7 @@ import  Project  from "@/components/project/Project";
 import Card from "@/components/card/Card";
 import  Contact  from "@/components/contact/Contact";
 import  Footer  from "@/components/footer/Footer";
+import Link from "next/link";
 
 
 import { projectData } from '../components/project/data';
@@ -19,7 +20,7 @@ export default function Home() {
       <HomeCover/>
       {/* <Start/> */}
       <Skills/>
-      <Project title="Projects" data={projectData} />
+      <Project  title="Projects" data={projectData} />
       <Contact/>
 
       {/* <Card/> */}

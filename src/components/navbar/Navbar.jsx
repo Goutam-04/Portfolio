@@ -17,7 +17,7 @@ const Navbar = ({}) => {
     'Kubernetes',
     'GIT',' ']
     return (
-        <nav className="flex sticky  top-0 z-1 bg-body p-5 text-info justify-between ">
+        <nav  className="flex sticky  top-0 z-1 bg-body p-5 text-info justify-between ">
             {/* <SearchBar /> */}
             {/* <div>Place holder for search bar</div> */}
             <Marquee className='bg-cyan-950'>

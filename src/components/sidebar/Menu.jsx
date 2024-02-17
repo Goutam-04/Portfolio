@@ -47,16 +47,16 @@ const Menu = () => {
         Resume
       </button>
       {/* List 1 */}
-      <List link="/" effect="slideUp">
+      <List link="#home" effect="slideUp">
         <Home /> Home
       </List>
-      <List link="/" effect="slideUp">
+      <List link="#skills" effect="slideUp">
         <Flame /> Skills
       </List>
-      <List link="/" effect="slideUp">
+      <List link="#projects" effect="slideUp">
         <Code /> Projects
       </List>
-      <List link="#" effect="slideUp">
+      <List link="#contact" effect="slideUp">
         <Video /> Contact
       </List>
 

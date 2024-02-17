@@ -8,7 +8,7 @@ import Image from "next/image";
 const Contact = () => {
   return (
     <>
-      <article className="contact-main ">
+      <article id="contact" className="contact-main ">
         <h2 className="text-xl font-medium text-primary-t text-center">Contact Me</h2>
         <p className="p-tag">
           If you are interested to hire me I am always open to new opportunities
