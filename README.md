@@ -10,6 +10,7 @@ Welcome to my web developer portfolio website! This project showcases my skills,
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Live Link](#live-link)
 
 ## About
 This website serves as a portfolio to display my work as a web developer. It includes information about me, my skills, projects, and contact details.
@@ -21,17 +22,16 @@ This website serves as a portfolio to display my work as a web developer. It inc
 - Contact section with links to my social media and email address
 
 ## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
-- React.js
 - Next.js
+- JavaScript
+- CSS3
 - Tailwind CSS (for styling)
+- Lucide icons (for icons)
 
 ## Getting Started
 To get a local copy up and running follow these simple steps:
-1. Clone the repository: `git clone https://github.com/your-username/your-portfolio.git`
-2. Navigate into the project directory: `cd your-portfolio`
+1. Clone the repository: `git clone https://github.com/Goutam-04/Porfolio.git`
+2. Navigate into the project directory: `cd Portfolio`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm run dev`
 
@@ -44,3 +44,5 @@ Contributions are welcome! If you have any suggestions, improvements, or bug fix
 ## License
 This project is licensed under the [MIT License](LICENSE).
 
+## Live Link
+You can view the live version of this project [here](https://porfolio-lake-rho.vercel.app/).
