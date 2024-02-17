@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 // import { BtnPlay } from './BtnPlay';
 // import { Facebook, Instagram, Twitter } from './Icons';
@@ -9,16 +9,28 @@
 import logoEdgerunners from "../../assets/img/logo-edgerunners.webp";
 import Image from "next/image";
 
+import React, { useState, useEffect } from "react";
+import TextTransition, { presets } from "react-text-transition";
 
 import "./homecover.css";
 
-
-
 export const HomeCover = () => {
-  
-  
+  const TEXTS = [
+    "Engineer",
+    "Graphic Desiner",
+    "Option Trader",
+    "Freelancer",
+    "Hardcore Gamer",
+  ];
+  const [index, setIndex] = React.useState(0);
 
-
+  React.useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000 // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
 
   return (
     <section className="home">
@@ -42,17 +54,26 @@ export const HomeCover = () => {
                 <span className="text-button text-2xl sm:text-6xl">/&gt;</span>
               </h2>
 
-              <p className="text-primary-t text-sm md:text-xl py-4 pt-5 text-center">
+              <div className="text-primary-t text-sm md:text-xl py-4 pt-5 text-center">
                 I am a<br className="sm:hidden inline" />{" "}
-                <span className="inline-block font-bold text-md md:text-base px-0.5 md:px-1 py-0.25 md:py-0.5 mr-0.5 md:mr-1 text-white border-none border-border rounded-full md:border-2 ">
-                  Web Developer / Graphic Designer
-                </span>
+                <div className="inline-flex items-center font-bold text-md md:text-base px-0.5 md:px-1 py-0.25 md:py-0.5 mr-0.5 md:mr-1 text-white border-none border-border rounded-full md:border-2">
+                  <div className="inline-block ">
+                    Web Developer /&nbsp;
+                    <TextTransition
+                      springConfig={presets.wobbly}
+                      direction="down"
+                      inline="false"
+                      delay={3000}
+                    >
+                      {TEXTS[index % TEXTS.length]}
+                    </TextTransition>
+                  </div>
+                </div>
                 <br className="sm:hidden inline" /> who likes coding cool stuff
                 for cool people.
-              </p>
+              </div>
 
-              <button className="bg-transparent hover:bg-button text-yellow  mt-12 md:mt-16 font-semibold hover:text-white py-3 px-6 md:px-8 border border-yellow hover:border-transparent rounded"
-              >
+              <button className="bg-transparent hover:bg-button text-yellow  mt-12 md:mt-16 font-semibold hover:text-white py-3 px-6 md:px-8 border border-yellow hover:border-transparent rounded">
                 Reach Out
               </button>
             </div>

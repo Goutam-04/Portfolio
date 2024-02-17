@@ -80,7 +80,7 @@ const Menu = () => {
       </List>
       <List
         target="_blank"
-        link="https://mail.google.com/mail/?view=cm&fs=1&su=SubjectText&body= IN goutamnayak2804@gmail.com you can contact me. Thank You!"
+        link="https://mail.google.com/mail/?view=cm&fs=1&su=SubjectText&body= You can contact me at goutamnayak2804@gmail.com. Thank you!"
         effect="slideUp"
       >
         <Mail color="#e63946" /> Gmail
