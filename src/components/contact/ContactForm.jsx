@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChevronRightCircle } from 'lucide-react';
 
 const ContactForm = () => {
   const [formValues, setFormValues] = useState({ fullname: "", email: "", message: "" });
@@ -36,17 +37,55 @@ const ContactForm = () => {
     return errors;
   }
 
-  const submitForm = (e) => {
-    e.preventDefault();
-    setFormErrors(handleValidation(formValues));
-    if (Object.keys(handleValidation(formValues)).length > 0) {
-      return;
-    }
-    else {
-      setSubmit(true);
-      setFormValues({ fullname: "", email: "", message: "" });
-    }
+const submitForm = async (e) => {
+  e.preventDefault();
+  setFormErrors(handleValidation(formValues));
+
+  // Check if there are any validation errors
+  if (Object.keys(handleValidation(formValues)).length > 0) {
+    return;
   }
+
+  try {
+    // Attempt to submit the form
+    await handleSubmit(e);
+
+    // If submission is successful, reset form values and set submit state to true
+    setFormValues({ fullname: "", email: "", message: "" });
+    setSubmit(true);
+  } catch (error) {
+    // Handle any errors that occur during form submission
+    console.error('Error submitting form:', error);
+    // You can set an error state or display an error message to the user
+  }
+}
+
+
+
+// web3forms
+async function handleSubmit(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+
+  formData.append("access_key", "79b2bf09-a7d7-413e-9e5e-864ec8cd40bf");
+
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+
+  const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+  });
+  const result = await response.json();
+  if (result.success) {
+      console.log(result);
+  }
+}
+
 
   return (
     <section className="contact-us-form">
@@ -54,7 +93,7 @@ const ContactForm = () => {
         <section className="form-success flex flex-col items-center">
           <h3 className="text-primary text-2xl">Message successfully sent!</h3>
           <p className="text-white text-lg">I will get back to you as soon as possible!</p>
-          <button className="mt-4 px-4 py-2 bg-primary border border-white text-white rounded-md hover:bg-secondary hover:border-secondary hover:text-primary transition duration-300" type="button" onClick={() => setSubmit(false)}>Send again</button>
+          <button className="mt-4 px-4 py-2 bg-primary border border-white text-primary-t rounded-md hover:bg-button hover:border-secondary hover:text-white transition duration-300" type="button" onClick={() => setSubmit(false)}>Send again</button>
         </section> :
         <form className="contact-form form-tag" onSubmit={submitForm}>
           <section className="contact-form-item relative">
@@ -82,8 +121,8 @@ const ContactForm = () => {
             {formErrors.message && <label className="textarea-error text-red-500 absolute -bottom-6 left-0">{formErrors.message}</label>}
           </section>
           <section className="contact-form-item">
-            <button className="mt-4 px-4 py-2 bg-primary border border-white text-white rounded-md hover:bg-secondary hover:border-secondary hover:text-primary transition duration-300" type="submit">
-              Send
+            <button className="flex justify-center items-center mt-4 px-4 py-1 bg-transparent border border-white text-primary-t rounded-md hover:bg-button hover:border-border hover:text-white transition duration-300" type="submit">
+              Send&nbsp;<ChevronRightCircle size={20}/>
             </button>
           </section>
         </form>}
