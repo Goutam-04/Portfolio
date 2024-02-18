@@ -45,4 +45,4 @@ Contributions are welcome! If you have any suggestions, improvements, or bug fix
 This project is licensed under the [MIT License](LICENSE).
 
 ## Live Link
-You can view the live version of this project [here](https://porfolio-lake-rho.vercel.app/).
+You can view the live version of this project [here](https://goutam-porfolio.vercel.app/).
