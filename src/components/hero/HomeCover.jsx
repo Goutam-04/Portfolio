@@ -46,19 +46,19 @@ export const HomeCover = () => {
         {/* MAIN HOME PART */}
         <div className=" w-full">
           <div className="max-w-screen-lg mx-auto flex flex-row items-center justify-center h-full px-4 md:flex-row">
-            <div className="flex flex-col justify-center items-center md:items-start h-full">
-              <h2 className="text-4xl sm:text-6xl font-bold text-primary-t text-center">
+            <div className="flex flex-col justify-center items-center lg:items-start h-full">
+              <h2 className="text-4xl lg:text-6xl font-bold text-primary-t text-center">
                 {/* I'm a Software Developer */}
                 Hi I&apos;m
-                <br className="sm:hidden inline" />
-                <span className="text-button text-2xl sm:text-6xl"> &lt;/</span>
-                <span className="text-xl sm:text-6xl">Goutam Nayak</span>
-                <span className="text-button text-2xl sm:text-6xl">/&gt;</span>
+                <br className="lg:hidden inline" />
+                <span className="text-button text-2xl lg:text-6xl sm:text-5xl"> &lt;/</span>
+                <span className="text-xl lg:text-6xl sm:text-5xl">Goutam Nayak</span>
+                <span className="text-button text-2xl lg:text-6xl sm:text-5xl">/&gt;</span>
               </h2>
 
               <div className="text-primary-t text-sm md:text-xl py-4 pt-5 text-center">
-                I am a<br className="sm:hidden inline" />{" "}
-                <div className="inline-flex items-center font-bold text-md md:text-base px-0.5 md:px-1 py-0.25 md:py-0.5 mr-0.5 md:mr-1 text-white border-none border-border rounded-full md:border-2">
+                I am a<br className="lg:hidden inline" />{" "}
+                <div className="inline-flex items-center font-bold text-md lg:text-base px-0.5 lg:px-1 py-0.25 md:py-0.5 mr-0.5 lg:mr-1 text-white border-none border-border rounded-full md:border-2">
                   <div className="inline-block ">
                     Web Developer /&nbsp;
                     <TextTransition
@@ -76,7 +76,7 @@ export const HomeCover = () => {
               </div>
               <Link href="#contact">
 
-              <button className="bg-transparent hover:bg-button text-yellow  mt-12 md:mt-16 font-semibold hover:text-white py-3 px-6 md:px-8 border border-yellow hover:border-transparent rounded">
+              <button className="bg-transparent hover:bg-button text-yellow  mt-12 lg:mt-16 font-semibold hover:text-white py-3 px-6 lg:px-8 border border-yellow hover:border-transparent rounded">
                 Reach Out
               </button>
               </Link>

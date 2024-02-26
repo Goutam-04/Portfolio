@@ -2,16 +2,6 @@
 
 Welcome to my web developer portfolio website! This project showcases my skills, projects, and experience as a web developer.
 
-## Table of Contents
-- [About](#about)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Live Link](#live-link)
-
 ## About
 This website serves as a portfolio to display my work as a web developer. It includes information about me, my skills, projects, and contact details.
 
