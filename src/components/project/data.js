@@ -2,7 +2,7 @@ export const projectData = [
     {
       id: 1,
       title: 'Chat Site',
-      techStack: 'React, React Hook Form, Zustand, Shadcn, Typescript',
+      techStack: 'React, Material UI, Socket IO',
       imageUrl: 'chat.jpg',
       href: 'https://github.com/Goutam-04/chat-app',
       demo: 'https://github.com/Goutam-04/chat-app',
@@ -11,7 +11,7 @@ export const projectData = [
       id: 2,
       title: 'Bolgging Site',
       techStack:
-        'Next.js 13, React Hook Form, Zustand, Radix UI, Typescript, Tailwind CSS',
+        'Next.js 13, css3, Mongo DB, OAuth, Prisma, Firebase,',
       imageUrl: 'blog.png',
       href: 'https://github.com/Goutam-04/Blogging',
       demo:'https://blogging-smoky.vercel.app/'
@@ -20,7 +20,7 @@ export const projectData = [
       id: 3,
       title: 'Typing Game',
       techStack:
-        'NodeJs, Express, Mongoose, Next.js 13, Next Auth, React Hook Form, Typescript, Tailwind CSS',
+        'NodeJs, Express, Next.js 13,  Tailwind CSS',
       imageUrl: 'typing.png',
       href: 'https://github.com/Goutam-04/Typing-game',
       demo:'https://typing-game-silk.vercel.app/'
@@ -28,7 +28,7 @@ export const projectData = [
     {
       id: 4,
       title: 'E-commerce Site',
-      techStack: 'OpenAI, Nodejs, Express, Mongoose, ReactJS, Tailwind CSS',
+      techStack: 'React Js, Tailwind, React-Router, Node Js, Express, MongoDB',
       imageUrl: 'ecommerce.jpg',
       href: 'https://github.com/Goutam-04/E-Commerce',
       demo: 'https://github.com/Goutam-04/E-Commerce',
