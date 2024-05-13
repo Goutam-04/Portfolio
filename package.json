@@ -12,6 +12,7 @@
     "@nextui-org/react": "^2.2.9",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "dotenv": "^16.4.5",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "ldrs": "^1.0.1",
