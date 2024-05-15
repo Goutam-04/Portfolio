@@ -9,7 +9,7 @@ export const projectData = [
     },
     {
       id: 2,
-      title: 'Bolgging Site',
+      title: 'Blogging Site',
       techStack:
         'Next.js 13, css3, Mongo DB, OAuth, Prisma, Firebase,',
       imageUrl: 'blog.png',
