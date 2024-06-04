@@ -1,0 +1,239 @@
+%-------------------------
+% Resume in Latex
+% Author : Matty
+% Based on: https://github.com/jakegut/resume (which was itself based on https://github.com/sb2nov/resume)
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+\input{glyphtounicode}
+
+% -------------------- FONT OPTIONS --------------------
+% sans-serif
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% serif
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-1in} % Default was -.5in
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\bluehref}[2]{\href{#1}{\textcolor{blue}{#2}}}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{flushright}
+\end{flushright}
+
+\vspace{-5pt}
+
+\begin{center}
+    \textbf{\Huge \scshape Goutam Kumar Nayak} \\ \vspace{8pt}
+    \small 
+    \faIcon{mobile}
+    {\underline{+91 8260195675}} $  $
+    \faIcon{github}
+    \href{https://github.com/Goutam-04}
+    {\underline{Github}} $  $
+    \faIcon{code}
+    \href{https://goutam-porfolio.vercel.app/}
+    {\underline{Portfolio Website}} $  $
+    \faIcon{linkedin}
+    \href{https://www.linkedin.com/in/goutam-kumar-nayak/}{\underline{Linkedin}} $  $
+    \faIcon{envelope}
+    \href{https://mail.google.com/mail/?view=cm&fs=1&su=SubjectText&body= You can contact me at goutamnayak2804@gmail.com. Thank you!}
+    {\underline{goutamnayak2804@gmail.com}}
+\end{center}
+
+
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    
+     
+      
+      
+      \textbf{Frontend}{: React Js, Next Js13, Tailwind CSS}\\
+      \textbf{Backend}{: Node.js, Express.js, REST api, Socket.IO, WebRTC, C++, JavaScript}\\
+      \textbf{Database}{: MongoDB}\\
+      \textbf{DevOps}{: Docker, Git/GitHub}\\
+      \textbf{Tools}{: Figma, Unix Shell, Postman}\\
+     
+     % \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
+    
+     
+    }}
+ \end{itemize}
+
+% -------------------- PROJECTS --------------------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+        {\textbf{Online C++ Compiler} $|$ \footnotesize\emph{Next.js, Tailwind CSS, Express.js, Socket.IO, Node-pty}}{May 2024}
+        \resumeItemListStart
+        \resumeItem{{\bluehref{https://github.com/Goutam-04/onlineIDE}{[GitHub]} \bluehref{https://online-cpp-compiler.vercel.app/}{[Demo]}}}
+            \resumeItem{Developed an online C++ compiler, featuring auto-complete suggestions on the code editor}
+            \resumeItem{Integrated a full-fledged terminal alongside the code editor for faster execution of C++ programs with all other commands of a terminal, and uses Socket.IO to communicate with backend}
+            \resumeItem{Implemented customization like theme selection, font size adjustments and intuitive controls for optimal experience}
+          \resumeItemListEnd
+          \resumeProjectHeading
+            {\textbf{CyberBlog} $|$ \footnotesize\emph{Next Js, css3, MongoDB, OAuth, Prisma, Firebase, Git}}{Jan. 2024}
+            \resumeItemListStart
+            \resumeItem{{\bluehref{https://github.com/Goutam-04/Blogging}{[GitHub]} \bluehref{https://blogging-smoky.vercel.app/}{[Demo]}}}
+                \resumeItem{Created CyberBlog using Next.js for efficient server-side rendering and smooth client-side navigation}
+                \resumeItem{Integrated OAuth authentication, resulting in a 90\% decrease in unauthorized access attempts}
+                \resumeItem{Ensured data integrity and security with Prisma's robust database schema management and query validation}
+      
+            \resumeItemListEnd
+       \resumeProjectHeading
+    {\textbf{TypeQuest} $|$  \footnotesize\emph{Next.js, Tailwind CSS}}{Feb 2024}
+    
+        \resumeItemListStart
+        \resumeItem{{\bluehref{https://github.com/Goutam-04/Typing-game}{[GitHub]} \bluehref{https://typing-game-silk.vercel.app/}{[Demo]}}}
+
+        \resumeItem{Developed engaging typing game using Next.js and Tailwind CSS}
+        \resumeItem{Leveraged Next.js for optimized performance and server-side rendering}
+        \resumeItem{Incorporated interactive challenges to enhance typing speed enhancement}
+          \resumeItemListEnd
+    
+
+        \resumeProjectHeading
+        {\textbf{E-Commerce} $|$ \footnotesize\emph{React Js, Tailwind, React-Router, Node Js, Express, MongoDB}}{Dec 2023}
+        \resumeItemListStart
+        \resumeItem{{\bluehref{https://github.com/Goutam-04/E-Commerce}{[GitHub]}}}
+            \resumeItem{Implemented client-side routing with React-Router for seamless navigation between pages}
+            \resumeItem{Created RESTful APIs with Express.js to handle requests from the frontend}
+            \resumeItem{Incorporated user authentication using JWT (JSON Web Tokens) and bcrypt.js for secure login and registration}
+            \resumeItem{Implemented role-based access control (RBAC) for restricting access to certain routes and features}
+          \resumeItemListEnd
+        
+             
+    \resumeSubHeadingListEnd
+
+% -------------------- EXPERIENCE --------------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+          \resumeProjectHeading
+          {\textbf{Enigma (coding club)} $|$ \footnotesize\emph{Member}\vspace{8pt}}{Mar. 2023 -- Feb. 2024}
+          {\small{Contributed to club activities centered around Competitive Programming and Web Development}}
+
+          
+    \resumeSubHeadingListEnd 
+
+% --------------------Achivements-------------------------
+\section{Achievements}
+\resumeSubHeadingListStart
+\resumeItemListStart
+\resumeItem{ Achieved top-tier global \textbf{rank 474} in CodeChef Starters 136 Div3 }
+\resumeItem{Secured \textbf{2nd place} in the \textbf{BUILD-A-HACKATHON} as a team member of 'Codewings' hosted by GDSC VSSUT community}
+\resumeItem{ Secured \textbf{1st position} in Blind Code during the tech fest at VSSUT}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+    % -------------------- EDUCATION --------------------
+\section{Education}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {Veer Surendra Sai University of Technology}{Mar 2026}
+      {B.Tech. Computer Science and Engineering}{Current GPA: 7.7/10.0}
+      
+    \resumeSubheading
+      {N.c. higher Secondary School }{May 2022}
+      {Intermediate Education in Science}{Percentage: 86.6/100}
+
+    \vspace{-10pt}
+
+  \resumeSubHeadingListEnd
+
+\end{document}
