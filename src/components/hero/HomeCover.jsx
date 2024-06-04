@@ -19,10 +19,9 @@ import "./homecover.css";
 export const HomeCover = () => {
   const TEXTS = [
     "Engineer",
-    "Graphic Desiner",
+    "UI/UX Desiner",
     "Option Trader",
     "Freelancer",
-    "Hardcore Gamer",
   ];
   const [index, setIndex] = React.useState(0);
 
@@ -40,7 +39,7 @@ export const HomeCover = () => {
 
       <div className="home__main-container">
         <div className="home__top-line-container">
-          <p>(cyberpunk edgerunners) - c 9957.2451</p>
+          <p>(need contribution on github) - c 9957.2451</p>
         </div>
 
         {/* MAIN HOME PART */}
@@ -58,9 +57,9 @@ export const HomeCover = () => {
 
               <div className="text-primary-t text-sm md:text-xl py-4 pt-5 text-center">
                 I am a<br className="lg:hidden inline" />{" "}
-                <div className="inline-flex items-center font-bold text-md lg:text-base px-0.5 lg:px-1 py-0.25 md:py-0.5 mr-0.5 lg:mr-1 text-white border-none border-border rounded-full md:border-2">
+                <div className="inline-flex items-center font-bold text-sm lg:text-base px-0.5 lg:px-1 py-0.25 md:py-0.5 mr-0.5 lg:mr-1 text-white border-none border-border rounded-full md:border-2">
                   <div className="inline-block ">
-                    Web Developer /&nbsp;
+                    Full-Stack Developer /&nbsp;
                     <TextTransition
                       springConfig={presets.wobbly}
                       direction="down"
