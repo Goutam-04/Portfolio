@@ -1,6 +1,3 @@
-require('dotenv').config({path:"./../../../.env"});
-
-
 import { useState } from "react";
 import { ChevronRightCircle } from "lucide-react";
 
@@ -68,7 +65,7 @@ const ContactForm = () => {
 
   // web3forms
   async function handleSubmit(event) {
-    const key="7b35db87-7a0c-4cc3-ae3d-6a364b24e2b2"
+    const key= process.env.NEXT_PUBLIC_ACCESS_KEY
 
     event.preventDefault();
     const formData = new FormData(event.target);
