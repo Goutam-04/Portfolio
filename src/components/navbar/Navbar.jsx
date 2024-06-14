@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import { Menu } from 'lucide-react';
 import { useMenu } from '../../provider/Provider';
 
 import Marquee from "react-fast-marquee";
+import { RiMenu4Fill } from '@remixicon/react';
 
 const Navbar = ({}) => {
     const { showMenu, showMenuVisibility } = useMenu();
@@ -30,7 +30,7 @@ const Navbar = ({}) => {
                     onClick={() => showMenuVisibility(!showMenu)}
                     type="button"
                 >
-                    <Menu className="flex lg:hidden cursor-pointer hover:text-primary transition-colors" />
+                    <RiMenu4Fill size={30} className="flex lg:hidden cursor-pointer hover:text-primary transition-colors" />
                 </button>
             </div>
         </nav>

@@ -1,19 +1,6 @@
-import {
-  Code,
-  Flame,
-  Github,
-  Home,
-  Image as ImageIcon,
-  Instagram,
-  Mail,
-  Linkedin,
-  Twitter,
-  Video,
-  X,
-} from "lucide-react";
 import List from "./List";
 import { useMenu } from "../../provider/Provider";
-import { Link } from "react-feather";
+import { RiCloseLargeFill, RiCodeSSlashLine, RiContactsLine, RiFireLine, RiGithubFill, RiHomeSmileLine,  RiInstagramLine, RiLinkedinBoxFill, RiMailSendFill, RiMenuFoldFill, RiTwitterXFill } from "@remixicon/react";
 
 const Menu = () => {
   const { showMenuVisibility } = useMenu();
@@ -36,7 +23,7 @@ const Menu = () => {
     >
       {/* THAT X BUTTON FOR CLOSING */}
       <div className="block lg:hidden p-5 z-10 text-primary-t absolute right-0 top-0 cursor-pointer text-2xl">
-        <X className={`text-primary-t`} onClick={handleXButtonClick} />
+        <RiCloseLargeFill className={`text-primary-t`} onClick={handleXButtonClick} />
       </div>
 
       {/*  resume button design*/}
@@ -48,16 +35,16 @@ const Menu = () => {
       </button>
       {/* List 1 */}
       <List link="#home" effect="slideUp">
-        <Home /> Home
+        <RiHomeSmileLine /> Home
       </List>
       <List link="#skills" effect="slideUp">
-        <Flame /> Skills
+        <RiFireLine /> Skills
       </List>
       <List link="#projects" effect="slideUp">
-        <Code /> Projects
+        <RiCodeSSlashLine /> Projects
       </List>
       <List link="#contact" effect="slideUp">
-        <Video /> Contact
+        <RiContactsLine /> Contact
       </List>
 
       {/* List 2 */}
@@ -68,7 +55,7 @@ const Menu = () => {
         link="https://github.com/Goutam-04"
         effect="slideUp"
       >
-        <Github color="#2a9d8f" /> Github
+        <RiGithubFill  color="#2a9d8f" /> Github
       </List>
 
       <List
@@ -76,14 +63,14 @@ const Menu = () => {
         link="https://twitter.com/Goutam_004"
         effect="slideUp"
       >
-        <Twitter color="#1DA1F2" /> Twitter
+        <RiTwitterXFill  color="#1DA1F2" /> Twitter
       </List>
       <List
         target="_blank"
         link="https://mail.google.com/mail/?view=cm&fs=1&su=SubjectText&body= You can contact me at goutamnayak2804@gmail.com. Thank you!"
         effect="slideUp"
       >
-        <Mail color="#e63946" /> Gmail
+        <RiMailSendFill  color="#e63946" /> Gmail
       </List>
 
       <List
@@ -91,7 +78,7 @@ const Menu = () => {
         link="https://www.linkedin.com/in/goutam-kumar-nayak/"
         effect="slideUp"
       >
-        <Linkedin color="#0277b5" absoluteStrokeWidth="false" strokeWidth="4" />{" "}
+        <RiLinkedinBoxFill  color="#0277b5" absoluteStrokeWidth="false" />
         Linkedin
       </List>
       <List
@@ -99,7 +86,7 @@ const Menu = () => {
         link="https://www.instagram.com/goutam.kumarnayak/"
         effect="slideUp"
       >
-        <Instagram color="#b5179e" /> Instagram
+        <RiInstagramLine  color="#b5179e" /> Instagram
       </List>
     </div>
   );

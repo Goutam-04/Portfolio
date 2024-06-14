@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronRightCircle } from "lucide-react";
+import { RiSendPlane2Fill} from "@remixicon/react";
 
 
 
@@ -158,7 +158,7 @@ const ContactForm = () => {
               type="submit"
             >
               Send&nbsp;
-              <ChevronRightCircle size={20} />
+              <RiSendPlane2Fill size={20}/>
             </button>
           </section>
         </form>
