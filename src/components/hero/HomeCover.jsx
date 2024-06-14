@@ -1,15 +1,6 @@
 "use client";
 
-// import { BtnPlay } from './BtnPlay';
-// import { Facebook, Instagram, Twitter } from './Icons';
-
-// import cdpred from '../../assets/img/logo-cdpred.svg';
-// import trigger from "../../assets/img/logo-trigger.svg";
-// import xMark from "../../assets/img/x-mark.svg";
-import logoEdgerunners from "../../assets/img/logo-edgerunners.webp";
-import Image from "next/image";
-
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import TextTransition, { presets } from "react-text-transition";
 
 import Link from "next/link";
@@ -17,15 +8,10 @@ import Link from "next/link";
 import "./homecover.css";
 
 export const HomeCover = () => {
-  const TEXTS = [
-    "Engineer",
-    "UI/UX Desiner",
-    "Option Trader",
-    "Freelancer",
-  ];
-  const [index, setIndex] = React.useState(0);
+  const TEXTS = ["Engineer", "UI/UX Desiner", "Option Trader", "Freelancer"];
+  const [index, setIndex] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const intervalId = setInterval(
       () => setIndex((index) => index + 1),
       3000 // every 3 seconds
@@ -50,9 +36,16 @@ export const HomeCover = () => {
                 {/* I'm a Software Developer */}
                 Hi I&apos;m
                 <br className="lg:hidden inline" />
-                <span className="text-button text-2xl lg:text-6xl sm:text-5xl"> &lt;/</span>
-                <span className="text-xl lg:text-6xl sm:text-5xl">Goutam Nayak</span>
-                <span className="text-button text-2xl lg:text-6xl sm:text-5xl">/&gt;</span>
+                <span className="text-button text-2xl lg:text-6xl sm:text-5xl">
+                  {" "}
+                  &lt;/
+                </span>
+                <span className="text-xl lg:text-6xl sm:text-5xl">
+                  Goutam Nayak
+                </span>
+                <span className="text-button text-2xl lg:text-6xl sm:text-5xl">
+                  /&gt;
+                </span>
               </h2>
 
               <div className="text-primary-t text-sm md:text-xl py-4 pt-5 text-center">
@@ -74,11 +67,18 @@ export const HomeCover = () => {
                 for cool people.
               </div>
               <Link href="#contact">
-
-              <button className="bg-transparent hover:bg-button text-yellow  mt-12 lg:mt-16 font-semibold hover:text-white py-3 px-6 lg:px-8 border border-yellow hover:border-transparent rounded">
-                Reach Out
-              </button>
+                <button className="bg-transparent hover:bg-button text-yellow  mt-12 lg:mt-16 font-semibold hover:text-white py-3 px-6 lg:px-8 border border-yellow hover:border-transparent rounded">
+                  Reach Out
+                </button>
               </Link>
+              <button
+                className="visible md:invisible hover:bg-transparent bg-button hover:text-yellow  mt-4 lg:mt-16 font-semibold text-white py-3 px-8  border hover:border-yellow border-transparent rounded"
+                onClick={() => {
+                  window.open("/resume.pdf", "_blank");
+                }}
+              >
+                Resume
+              </button>
             </div>
           </div>
         </div>

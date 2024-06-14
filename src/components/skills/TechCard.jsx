@@ -6,7 +6,7 @@ const TechCard = ({ title, classaName, tech }) => {
       <div className="text-primary-t text-center font-medium text-lg tracking-wider">
         {title}
       </div>
-      <div className="flex flex-wrap gap-2  ">
+      <div className="flex flex-wrap gap-2 justify-center items-center ">
         {tech.map((item, i) => (
           <div
             key={i}
@@ -24,10 +24,6 @@ const TechCard = ({ title, classaName, tech }) => {
               item === 'Next Auth' && 'border border-purple-500/60',
               item === 'Socket IO' && 'border border-rose-500/60',
               item === 'MongoDB' && 'border border-emerald-500/60',
-
-              
-            
-             
               item === 'Docker' && 'border border-blue-500/60',
               item === 'Kubernetes' && 'border border-blue-500/60',
               item === 'GIT' && 'border border-orange-500/60',

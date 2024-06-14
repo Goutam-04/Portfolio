@@ -1,5 +1,4 @@
 import TechCard from './TechCard';
-import "./skills.css"
 
 const Skills = ({}) => {
   return (
