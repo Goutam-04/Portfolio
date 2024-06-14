@@ -12,7 +12,7 @@ const Skills = ({}) => {
 
 
       <Fade direction='down' triggerOnce>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 ">
         <TechCard
           title="Frontend"
           classaName="bg-[#4f91f2]"
@@ -34,7 +34,7 @@ const Skills = ({}) => {
         <TechCard
           title="Database"
           classaName="bg-[#e0558a]"
-          tech={[ 'MongoDB',]}
+          tech={[ 'MongoDB', 'MySQL']}
         />
         <TechCard
           title="Devops"

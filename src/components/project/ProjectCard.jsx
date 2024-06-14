@@ -23,7 +23,7 @@ export default function ProjectsCard({ title, src, href, techStack, demo }) {
           height={200}
           style={{ width: "100%", height: "200px" }} // Override width and height
         />
-        <small className="text-default-500 text-center">{techStack}</small>
+        <small className="text-default-500 text-center  text-base ">{techStack}</small>
       </CardBody>
 
       {/* TRYING CYBER BUTTONS */}
