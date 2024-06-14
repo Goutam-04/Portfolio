@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
                                 <Navbar />
                                 {children}
                                 {/* <Footer/> */}
+                                
                             </main>
                         </div>
                     </ContactFormProvider>

@@ -1,6 +1,7 @@
 import List from "./List";
 import { useMenu } from "../../provider/Provider";
 import { RiCloseLargeFill, RiCodeSSlashLine, RiContactsLine, RiFireLine, RiGithubFill, RiHomeSmileLine,  RiInstagramLine, RiLinkedinBoxFill, RiMailSendFill, RiMenuFoldFill, RiTwitterXFill } from "@remixicon/react";
+import { Fade, Slide} from "react-awesome-reveal";
 
 const Menu = () => {
   const { showMenuVisibility } = useMenu();
@@ -23,12 +24,15 @@ const Menu = () => {
       <div className="block lg:hidden p-5 z-10 text-primary-t absolute right-0 top-0 cursor-pointer text-2xl">
         <RiCloseLargeFill className={`text-primary-t`} onClick={handleXButtonClick} />
       </div>
+      
       <button
-       className="invisible md:visible bg-transparent hover:bg-button text-yellow  font-semibold hover:text-white py-2 px-3 border border-yellow hover:border-transparent rounded"
+       className="invisible md:visible bg-transparent hover:bg-button text-yellow  font-semibold hover:text-white md:mt-20 lg:mt-0 mb-4 py-2 px-3 border border-yellow hover:border-transparent rounded"
        onClick={handleResumeClick}
      >
        Resume
      </button>
+     <Slide cascade damping={0.1}>
+
       {/* List 1 */}
       <List link="#home" effect="slideUp">
         <RiHomeSmileLine /> Home
@@ -44,12 +48,13 @@ const Menu = () => {
       </List>
 
       {/* List 2 */}
-      <div className="mt-5">Socials</div>
+      {/* <div className="mt-5">Socials</div> */}
 
       <List
         target="_blank"
         link="https://github.com/Goutam-04"
         effect="slideUp"
+        className="mt-10"
       >
         <RiGithubFill  color="#2a9d8f" /> Github
       </List>
@@ -84,6 +89,7 @@ const Menu = () => {
       >
         <RiInstagramLine  color="#b5179e" /> Instagram
       </List>
+     </Slide>
     </div>
   );
 };

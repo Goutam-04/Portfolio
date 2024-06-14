@@ -4,6 +4,7 @@ import { useMenu } from '../../provider/Provider';
 
 import Marquee from "react-fast-marquee";
 import { RiMenu4Fill } from '@remixicon/react';
+import { Fade } from 'react-awesome-reveal';
 
 const Navbar = ({}) => {
     const { showMenu, showMenuVisibility } = useMenu();
@@ -17,6 +18,8 @@ const Navbar = ({}) => {
     'Kubernetes',
     'GIT',' ']
     return (
+        <Fade direction='down'>
+
         <nav  className="flex sticky  top-0 z-1 bg-body p-5 text-info justify-between ">
             {/* <SearchBar /> */}
             {/* <div>Place holder for search bar</div> */}
@@ -34,6 +37,7 @@ const Navbar = ({}) => {
                 </button>
             </div>
         </nav>
+        </Fade>
     );
 };
 

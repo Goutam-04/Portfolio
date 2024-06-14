@@ -1,3 +1,6 @@
+'use client'
+
+import { Fade } from 'react-awesome-reveal';
 import TechCard from './TechCard';
 
 const Skills = ({}) => {
@@ -6,6 +9,9 @@ const Skills = ({}) => {
       <div className="text-xl font-medium mt-2 text-primary-t mb-5 text-center">
         Skills I Have
       </div>
+
+
+      <Fade direction='down' triggerOnce>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
         <TechCard
           title="Frontend"
@@ -44,6 +50,8 @@ const Skills = ({}) => {
           tech={[ 'Postman','Linux OS','Canva','Adobe XD']}
         />
       </div>
+      
+      </Fade>
     </div>
   );
 };

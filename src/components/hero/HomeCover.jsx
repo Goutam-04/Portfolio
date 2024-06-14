@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import TextTransition, { presets } from "react-text-transition";
-
+import { Zoom, Fade } from "react-awesome-reveal";
+import { Suspense } from "react";
 import Link from "next/link";
 
 import "./homecover.css";
@@ -12,11 +13,12 @@ export const HomeCover = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      3000 // every 3 seconds
-    );
-    return () => clearTimeout(intervalId);
+    // Use setInterval to update the index every 3 seconds
+    const intervalId = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % TEXTS.length);
+    }, 3000); // Every 3 seconds
+
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
@@ -48,6 +50,9 @@ export const HomeCover = () => {
                 </span>
               </h2>
 
+
+<Suspense>
+
               <div className="text-primary-t text-sm md:text-xl py-4 pt-5 text-center">
                 I am a<br className="lg:hidden inline" />{" "}
                 <div className="inline-flex items-center font-bold text-sm lg:text-base px-0.5 lg:px-1 py-0.25 md:py-0.5 mr-0.5 lg:mr-1 text-white border-none border-border rounded-full md:border-2">
@@ -57,7 +62,7 @@ export const HomeCover = () => {
                       springConfig={presets.wobbly}
                       direction="down"
                       inline="false"
-                      delay={3000}
+                      delay={0}
                     >
                       {TEXTS[index % TEXTS.length]}
                     </TextTransition>
@@ -66,6 +71,8 @@ export const HomeCover = () => {
                 <br className="sm:hidden inline" /> who likes coding cool stuff
                 for cool people.
               </div>
+
+</Suspense>
               <Link href="#contact">
                 <button className="bg-transparent hover:bg-button text-yellow  mt-12 lg:mt-16 font-semibold hover:text-white py-3 px-6 lg:px-8 border border-yellow hover:border-transparent rounded">
                   Reach Out
