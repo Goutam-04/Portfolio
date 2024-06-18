@@ -4,6 +4,7 @@ import { RiSendPlane2Fill} from "@remixicon/react";
 
 
 const ContactForm = () => {
+  const [send,setSend]=useState('Send')
   const [formValues, setFormValues] = useState({
     fullname: "",
     email: "",
@@ -41,25 +42,26 @@ const ContactForm = () => {
   };
 
   const submitForm = async (e) => {
+    // setSend='Sending...'
     e.preventDefault();
     setFormErrors(handleValidation(formValues));
 
-    // Check if there are any validation errors
+    // Check  validation errors
     if (Object.keys(handleValidation(formValues)).length > 0) {
       return;
     }
 
     try {
-      // Attempt to submit the form
+      setSend('Sending...');
       await handleSubmit(e);
 
-      // If submission is successful, reset form values and set submit state to true
+      // after submissin change to default
       setFormValues({ fullname: "", email: "", message: "" });
       setSubmit(true);
+      setSend('Send'); //Reset the button text to "Send" after suvmission
     } catch (error) {
-      // Handle any errors that occur during form submission
       console.error("Error submitting form:", error);
-      // You can set an error state or display an error message to the user
+      setSend('Send');
     }
   };
 
@@ -157,7 +159,8 @@ const ContactForm = () => {
               className="flex justify-center items-center mt-4 px-4 py-1 bg-transparent border border-white text-primary-t rounded-md hover:bg-button hover:border-border hover:text-white transition duration-300"
               type="submit"
             >
-              Send&nbsp;
+              {send}&nbsp;
+              
               <RiSendPlane2Fill size={20}/>
             </button>
           </section>
