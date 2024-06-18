@@ -32,6 +32,22 @@ export const projectData = [
       href: 'https://github.com/Goutam-04/E-Commerce',
       demo: 'https://github.com/Goutam-04/E-Commerce',
     },
+    {
+      id: 5,
+      title: 'E-commerce Site',
+      techStack: 'React Js, Tailwind, React-Router, Node Js, Express, MongoDB',
+      imageUrl: 'ecommerce.jpg',
+      href: 'https://github.com/Goutam-04/E-Commerce',
+      demo: 'https://github.com/Goutam-04/E-Commerce',
+    },
+    {
+      id: 6,
+      title: 'E-commerce Site',
+      techStack: 'React Js, Tailwind, React-Router, Node Js, Express, MongoDB',
+      imageUrl: 'ecommerce.jpg',
+      href: 'https://github.com/Goutam-04/E-Commerce',
+      demo: 'https://github.com/Goutam-04/E-Commerce',
+    },
   ];
 
   // {
