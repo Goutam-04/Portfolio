@@ -5,6 +5,7 @@ import Navbar from '@/components/navbar/Navbar';
 import { ContactFormProvider, MenuProvider } from '@/provider/Provider';
 import { Toaster } from 'react-hot-toast';
 import Footer from '@/components/footer/Footer';
+import ScrollToTop from '@/components/scroll/ScrolltoTop';
 
 export const metadata = {
     title: 'Goutam | Portfolio',
@@ -23,8 +24,8 @@ export default function RootLayout({ children }) {
                             <main className="flex-1 pl-0 lg:pl-[300px]">
                                 <Navbar />
                                 {children}
-                                {/* <Footer/> */}
                                 
+                                <ScrollToTop/>
                             </main>
                         </div>
                     </ContactFormProvider>
