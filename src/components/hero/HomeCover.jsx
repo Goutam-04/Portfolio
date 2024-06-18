@@ -8,6 +8,7 @@ import Link from "next/link";
 
 import "./homecover.css";
 
+
 export const HomeCover = () => {
   const TEXTS = ["Engineer", "UI/UX Desiner", "Option Trader", "Freelancer"];
   const [index, setIndex] = useState(0);
