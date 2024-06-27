@@ -75,7 +75,7 @@ export const HomeCover = () => {
 
 </Suspense>
               <Link href="#contact">
-                <button className="bg-transparent hover:bg-button text-yellow  mt-12 lg:mt-16 font-semibold hover:text-white py-3 px-6 lg:px-8 border border-yellow hover:border-transparent rounded">
+                <button className="bg-transparent hover:bg-button text-yellow  mt-12 lg:mt-16 font-semibold hover:text-white py-3 px-6 lg:px-8 border border-yellow hover:border-transparent rounded ">
                   Reach Out
                 </button>
               </Link>
